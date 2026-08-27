@@ -58,6 +58,11 @@ website_route_rules = [
     {"from_route": "/mosaic/<path:app_path>", "to_route": "mosaic"},
     {"from_route": "/ury/<path:app_path>", "to_route": "ury"},
 ]
+
+# POS v2 is hidden for now; send anyone hitting it to the POS v1 table view
+website_redirects = [
+    {"source": r"pos(/.*)?", "target": "/urypos/Table"},
+]
 # Home Pages
 # ----------
 
@@ -383,7 +388,8 @@ fixtures = [
                 "name",
                 "in",
                 {
-                    "POS Closing Entry Detail-closing_amount-label"
+                    "POS Closing Entry Detail-closing_amount-label",
+                    "POS Invoice-order_type-options"
                 }
             ]
         ],
