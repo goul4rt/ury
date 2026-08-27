@@ -153,7 +153,7 @@ export const useMenuStore = defineStore("menu", {
           if (error._server_messages) {
             const messages = JSON.parse(error._server_messages);
             const message = JSON.parse(messages[0]);
-            this.alert.createAlert("Message", message.message, "OK");
+            this.alert.createAlert("Mensagem", message.message, "OK");
           }
         });
       this.db
@@ -207,8 +207,8 @@ export const useMenuStore = defineStore("menu", {
       ) {
         this.selectedOrderType = null;
         this.alert.createAlert(
-          "Message",
-          "Dine in is not permitted for takeaway orders.",
+          "Mensagem",
+          "Consumo no local não é permitido para pedidos de viagem.",
           "OK"
         );
       } else {
@@ -221,8 +221,8 @@ export const useMenuStore = defineStore("menu", {
       if (this.cart.length > 0) {
         this.alert
           .createAlert(
-            "Cart Not Empty",
-            "Please clear your cart before selecting an order type.",
+            "Carrinho Não Está Vazio",
+            "Esvazie o carrinho antes de selecionar um tipo de pedido.",
             "OK"
           )
           .then(() => {
@@ -239,7 +239,7 @@ export const useMenuStore = defineStore("menu", {
               if (error._server_messages) {
                 const messages = JSON.parse(error._server_messages);
                 const message = JSON.parse(messages[0]);
-                this.alert.createAlert("Message", message.message, "OK");
+                this.alert.createAlert("Mensagem", message.message, "OK");
               }
             });
         } else {
@@ -253,8 +253,8 @@ export const useMenuStore = defineStore("menu", {
       if (this.selectedOrderType === "Aggregators" && this.cart.length > 0) {
         this.alert
           .createAlert(
-            "Cart Not Empty",
-            "Please empty your cart before selecting an aggregator.",
+            "Carrinho Não Está Vazio",
+            "Esvazie o carrinho antes de selecionar um agregador.",
             "OK"
           )
           .then(() => {
@@ -280,7 +280,7 @@ export const useMenuStore = defineStore("menu", {
             if (error._server_messages) {
               const messages = JSON.parse(error._server_messages);
               const message = JSON.parse(messages[0]);
-              this.alert.createAlert("Message", message.message, "OK");
+              this.alert.createAlert("Mensagem", message.message, "OK");
             }
           });
       }
@@ -360,7 +360,7 @@ export const useMenuStore = defineStore("menu", {
         item.comment = "";
         this.cart.push(item);
 
-        let message = `Added ${item.item} to Cart`;
+        let message = `${item.item} adicionado ao Carrinho`;
         this.notification.createNotification(message);
       }
     },
@@ -382,7 +382,7 @@ export const useMenuStore = defineStore("menu", {
       if (itemIndexExists) {
         item.comment = "";
         this.cart[itemIndex].qty++;
-        let message = `${item.item}'s Qty updated to ${item.qty} in Cart`;
+        let message = `Quantidade de ${item.item} atualizada para ${item.qty} no Carrinho`;
         this.notification.createNotification(message);
       } else {
         item.comment = "";
@@ -397,8 +397,8 @@ export const useMenuStore = defineStore("menu", {
         this.cart = this.cart.filter((obj) => obj.qty > 0);
         let message =
           item.qty > 0
-            ? `${item.item}'s Qty Reduced from Cart Total Qty=${item.qty}`
-            : `${item.item} has been removed from Cart`;
+            ? `Quantidade de ${item.item} reduzida no Carrinho. Qtd. Total=${item.qty}`
+            : `${item.item} foi removido do Carrinho`;
         this.notification.createNotification(message);
       }
     },

@@ -4,14 +4,14 @@
       class="fixed inset-0 z-50 flex items-center justify-center bg-gray-300 bg-opacity-50 text-lg"
       v-if="this.invoiceData.isPrinting"
     >
-      Printing Invoice
+      Imprimindo Fatura
     </div>
 
     <div
       class="fixed inset-0 z-50 flex items-center justify-center bg-gray-300 bg-opacity-50 text-lg"
       v-if="this.recentOrders.isLoading"
     >
-      Payment Being Processing
+      Processando Pagamento
     </div>
     <div
       class="max-w-lg flex-1 rounded-lg border border-gray-200 bg-white p-4 shadow dark:border-gray-700 dark:bg-gray-800 sm:p-8"
@@ -20,7 +20,7 @@
         <h5
           class="text-xl font-bold leading-none text-gray-900 dark:text-white"
         >
-          Recent Orders
+          Pedidos Recentes
         </h5>
       </div>
       <div class="w-full" @click="this.recentOrders.showOrder = false">
@@ -28,7 +28,7 @@
           type="search"
           id="orderSeach"
           class="block w-full rounded-lg border-gray-300 bg-gray-50 p-2.5 pl-10 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-          placeholder="Search by Invoice Id or Customer Name or Mobile Number"
+          placeholder="Buscar por Nº da Fatura, Nome do Cliente ou Celular"
           v-model="this.recentOrders.searchOrder"
           @input="this.recentOrders.handleSearchInput"
         />
@@ -38,22 +38,22 @@
           v-model="this.recentOrders.selectedStatus"
           @change="this.recentOrders.handleStatusChange"
         >
-          <option value="Draft">Draft</option>
-          <option value="Unbilled">Unbilled</option>
+          <option value="Draft">Rascunho</option>
+          <option value="Unbilled">Em Aberto</option>
           <option
             value="Recently Paid"
             v-if="auth.viewAllStatus === 0 && invoiceData.paidLimit > 0"
           >
-            Recently Paid
+            Pagos Recentes
           </option>
           <option value="Paid" v-if="this.auth.viewAllStatus === 1">
-            Paid
+            Pago
           </option>
           <option value="Consolidated" v-if="this.auth.viewAllStatus === 1">
-            Consolidated
+            Consolidado
           </option>
           <option value="Return" v-if="this.auth.viewAllStatus === 1">
-            Return
+            Devolução
           </option>
         </select>
       </div>
@@ -87,7 +87,7 @@
                   {{
                     recentOrder.restaurant_table
                       ? recentOrder.restaurant_table
-                      : recentOrder.order_type
+                      : translateOrderType(recentOrder.order_type)
                   }}
                 </p>
               </div>
@@ -116,7 +116,7 @@
           @click="this.recentOrders.previousPageClick()"
           class="mr-2 w-[80px] rounded-md border px-2 py-1"
         >
-          Previous
+          Anterior
         </button>
         <button class="mr-2 rounded-md border px-2 py-1">
           {{ this.recentOrders.currentPage }}
@@ -126,7 +126,7 @@
           v-if="this.recentOrders.next"
           class="w-[80px] rounded-md border px-2 py-1"
         >
-          Next
+          Próxima
         </button>
       </div>
     </div>
@@ -156,7 +156,7 @@
             class="mr-2 mt-2 truncate text-sm text-gray-500 dark:text-gray-400"
             v-if="this.recentOrders.selectedOrder.waiter"
           >
-            Waiter : {{ this.recentOrders.selectedOrder.waiter }}
+            Garçom: {{ this.recentOrders.selectedOrder.waiter }}
           </p>
         </div>
         <div class="items-center space-x-4 text-right">
@@ -196,7 +196,7 @@
                   <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
                 </svg>
                 <span class="text-xs">
-                  {{ this.recentOrders.selectedOrder.status }}
+                  {{ translateOrderStatus(this.recentOrders.selectedOrder.status) }}
                 </span>
               </Badge>
             </div>
@@ -205,7 +205,7 @@
       </div>
       <div class="mb-2 mt-4">
         <p class="truncate text-lg font-semibold text-gray-900 dark:text-white">
-          Items
+          Itens
         </p>
       </div>
       <div class="w-full rounded bg-gray-50 p-2">
@@ -291,15 +291,15 @@
           </svg>
 
           <template v-if="!recentOrders.showDiscount">
-            <span>Add Discount</span>
+            <span>Adicionar Desconto</span>
           </template>
 
           <template v-else>
             <span v-if="recentOrders.totalAmount > 0">
-              Additional {{ recentOrders.percentage }}% discount Applied
+              Desconto adicional de {{ recentOrders.percentage }}% aplicado
             </span>
             <span v-else class="text-red-500">
-              {{ recentOrders.percentage }}% cannot be Applied
+              Desconto de {{ recentOrders.percentage }}% não pode ser aplicado
             </span>
           </template>
         </div>
@@ -308,7 +308,7 @@
         <input
           type="number"
           class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 pl-10 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-          placeholder="Enter Discount Percentage"
+          placeholder="Informe o Percentual de Desconto"
           v-model="this.recentOrders.percentage"
           @input="this.recentOrders.updatePercentage"
           @keyup.enter="this.recentOrders.applyDiscount"
@@ -317,14 +317,14 @@
       </div>
       <div class="mb-2 mt-5">
         <p class="truncate text-lg font-semibold text-gray-900 dark:text-white">
-          Totals
+          Totais
         </p>
       </div>
       <div class="w-full rounded bg-gray-50 p-2">
         <div class="ml-2 mt-2 flex items-center space-x-4">
           <div class="min-w-2 flex-1">
             <p class="truncate text-base text-gray-800 dark:text-white">
-              Net Total
+              Total Líquido
             </p>
           </div>
 
@@ -357,7 +357,7 @@
             <p
               class="truncate text-base font-semibold text-gray-800 dark:text-white"
             >
-              Discount({{ this.recentOrders.additionalPiscountPercentage }})
+              Desconto ({{ this.recentOrders.additionalPiscountPercentage }})
             </p>
           </div>
           <div class="items-center space-x-4 text-right">
@@ -374,7 +374,7 @@
             <p
               class="truncate text-base font-semibold text-gray-800 dark:text-white"
             >
-              Grand Total
+              Total Geral
             </p>
           </div>
           <div class="items-center space-x-4 text-right">
@@ -403,7 +403,7 @@
           class="mb-2 mr-2 rounded-lg border border-gray-400 bg-white px-5 py-2.5 text-sm font-medium text-gray-800 focus:outline-none dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400"
           @click="this.invoiceData.printFunction()"
         >
-          Print Receipt
+          Imprimir Recibo
         </button>
       </div>
       <div
@@ -428,14 +428,14 @@
               : ''
           "
         >
-          Edit
+          Editar
         </button>
         <button
           type="button"
           class="mb-2 mr-2 w-36 rounded-lg border border-gray-300 bg-white px-5 py-2.5 text-sm font-medium text-gray-700 focus:outline-none dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400"
           @click="this.invoiceData.printFunction()"
         >
-          Print Receipt
+          Imprimir Recibo
         </button>
       </div>
       <div
@@ -450,7 +450,7 @@
           class="mb-2 mr-2 w-36 rounded-lg border border-gray-300 bg-white px-5 py-2.5 text-sm font-medium text-gray-700 focus:outline-none dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400"
           @click="this.recentOrders.billing()"
         >
-          Make Payment
+          Receber Pagamento
         </button>
         <button
           type="button"
@@ -471,7 +471,7 @@
               : ''
           "
         >
-          Cancel Order
+          Cancelar Pedido
         </button>
       </div>
       <div
@@ -481,7 +481,7 @@
         <div class="mt-20 flex items-center justify-center">
           <div class="w-full rounded-lg bg-white p-6 shadow-lg md:max-w-md">
             <div class="flex justify-end">
-              <span class="sr-only">Close</span>
+              <span class="sr-only">Fechar</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-5 w-5"
@@ -501,14 +501,14 @@
             <h2
               class="mt-1 block text-left text-xl font-medium text-gray-900 dark:text-white"
             >
-              Are you sure to cancel
+              Tem certeza que deseja cancelar?
             </h2>
             <div class="relative">
               <label
                 for="cancelReason"
                 class="mt-6 block text-left text-gray-900 dark:text-white"
               >
-                Reason
+                Motivo
               </label>
               <input
                 type="text"
@@ -522,13 +522,13 @@
                 @click="this.recentOrders.cancelInvoiceFlag = false"
                 class="mr-3 mt-6 rounded border border-gray-300 bg-gray-50 px-3 py-2"
               >
-                No
+                Não
               </button>
               <button
                 @click="handleConfirmCancellation()"
                 class="mt-6 rounded bg-blue-500 px-3 py-2 text-white hover:bg-blue-600"
               >
-                Yes
+                Sim
               </button>
             </div>
           </div>
@@ -541,7 +541,7 @@
         <div class="mt-10 flex items-center justify-center">
           <div class="h-82 w-full rounded-lg bg-white p-6 shadow-lg md:w-3/5">
             <div class="flex justify-end">
-              <span class="sr-only">Close</span>
+              <span class="sr-only">Fechar</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-5 w-5"
@@ -561,7 +561,7 @@
             <h2
               class="mt-1 block text-left text-xl font-medium text-gray-900 dark:text-white"
             >
-              Select Mode Of Payment
+              Selecionar Forma de Pagamento
             </h2>
             <div class="mt-8 flex items-center justify-center">
               <div class="w-full max-w-full overflow-x-auto">
@@ -600,7 +600,7 @@
             </div>
             <div v-if="recentOrders.changeAmount > 0" class="mt-4 p-4 bg-gray-50 rounded-lg">
               <div class="flex justify-between items-center mt-2 text-green-600">
-                <span class="text-lg font-medium">Change Amount:</span>
+                <span class="text-lg font-medium">Troco:</span>
                 <span class="text-lg">₹ {{ recentOrders.changeAmount.toFixed(2) }}</span>
               </div>
             </div>
@@ -612,7 +612,7 @@
                 "
                 class="mt-10 rounded bg-blue-500 px-3 py-2 text-white hover:bg-blue-600"
               >
-                Submit
+                Confirmar
               </button>
             </div>
           </div>
@@ -628,15 +628,18 @@ import { useInvoiceDataStore } from "@/stores/invoiceData.js";
 import { useAuthStore } from "@/stores/Auth.js";
 import { Badge } from "flowbite-vue";
 import { useNotifications } from "@/stores/Notification.js";
+import { translateOrderType, translateOrderStatus } from "@/utils/labels.js";
 export default {
   name: "RecentOrder",
   components: {
     Badge,
   },
   methods: {
+    translateOrderType,
+    translateOrderStatus,
     handleConfirmCancellation() {
       if (!this.recentOrders.cancelReason || this.recentOrders.cancelReason.trim() === '') {
-        this.notification.createNotification('Please enter a reason for cancellation');
+        this.notification.createNotification('Informe o motivo do cancelamento');
         return;
       }
       this.recentOrders.cancelInvoice();

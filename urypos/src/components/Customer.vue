@@ -25,7 +25,7 @@
         <input
           type="search"
           class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 pl-10 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 md:w-3/5 lg:w-2/5"
-          placeholder="Search Customers"
+          placeholder="Buscar Clientes"
           v-model="this.customers.search"
           @input="this.customers.handleSearchInput"
           @click="this.customers.searchCustomer()
@@ -61,7 +61,7 @@
           </div>
           <div v-if="this.customers.showAddNewCustomer">
             <div class="flex justify-end">
-              <span class="sr-only">Close</span>
+              <span class="sr-only">Fechar</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="mt-2 mr-2 h-4 w-4"
@@ -99,7 +99,7 @@
                   d="M12 6v12m6-6H6"
                 ></path>
               </svg>
-              Create New Customer
+              Criar Novo Cliente
             </a>
           </div>
         </div>
@@ -111,7 +111,7 @@
         <div class="mb-16 mt-10 flex items-center justify-center">
           <div class="w-full rounded-lg bg-white p-6 shadow-lg md:max-w-md">
             <div class="flex justify-end">
-              <span class="sr-only">Close</span>
+              <span class="sr-only">Fechar</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-5 w-5"
@@ -132,13 +132,13 @@
             <h2
               class="mt-1 block text-left text-xl font-medium text-gray-900 dark:text-white"
             >
-              New Customer
+              Novo Cliente
             </h2>
             <label
               for="newCustomer"
               class="mt-6 block text-left text-gray-900 dark:text-white"
             >
-              Customer Name
+              Nome do Cliente
             </label>
             <input
               type="text"
@@ -151,7 +151,7 @@
               for="mobileNumber"
               class="mt-6 block text-left text-gray-900 dark:text-white"
             >
-              Mobile Number
+              Número de Celular
             </label>
             <input
               type="number"
@@ -164,7 +164,7 @@
                 for="customerGroup"
                 class="mt-6 block text-left text-gray-900 dark:text-white"
               >
-                Customer Group
+                Grupo de Clientes
               </label>
               <input
                 type="text"
@@ -200,7 +200,7 @@
                 for="territory"
                 class="mt-6 block text-left text-gray-900 dark:text-white"
               >
-                Territory
+                Território
               </label>
               <input
                 type="text"
@@ -238,7 +238,7 @@
                 @click="this.customers.addNewCustomer()"
                 class="mt-8 rounded bg-blue-500 px-3 py-2 text-white hover:bg-blue-600"
               >
-                Save
+                Salvar
               </button>
             </div>
           </div>
@@ -263,7 +263,7 @@
           type="number"
           id="mobileNumber"
           class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 pl-10 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 md:w-3/5 lg:w-2/5"
-          placeholder="Mobile Number"
+          placeholder="Número de Celular"
           readonly
           :value="this.customers.newCustomerMobileNo || this.recentOrders.mobileNumber || this.table.mobileNumber"
         />
@@ -290,7 +290,7 @@
           type="number"
           id="numberOfPax"
           class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 pl-10 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 md:w-3/5 lg:w-2/5"
-          placeholder="Pax"
+          placeholder="Nº de Pessoas"
           required
           v-model="this.customers.numberOfPax"
           @input="this.customers.validateInput"
@@ -318,9 +318,9 @@
         <input
           type="text"
           class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 pl-10 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 md:w-3/5 lg:w-2/5"
-          placeholder="Order Type"
+          placeholder="Tipo de Pedido"
           :value="
-            this.menu.selectedOrderType || this.recentOrders.pastOrderType
+            translateOrderType(this.menu.selectedOrderType || this.recentOrders.pastOrderType)
           "
           @click="
                 this.invoiceData.editOrderType && (this.recentOrders.pastOrderType === 'Take Away' || this.recentOrders.pastOrderType === 'Delivery')
@@ -342,7 +342,7 @@
             @click="this.customers.selecetOrderType(customers.newOrderType)"
           >
             <h2 class="text-sm leading-normal">
-               {{ customers.newOrderType }}
+               {{ translateOrderType(customers.newOrderType) }}
             </h2>
           </div>
         </div>
@@ -352,15 +352,15 @@
         class="tex mt-5 text-lg font-medium"
         v-if="this.customers.customerFavouriteItems.length > 0"
       >
-        Favourite Items
+        Itens Favoritos
       </h1>
 
       <div
         class="cart-item-details mt-1 grid grid-cols-2 gap-6 py-2 sm:w-full md:w-full lg:w-full lg:grid-cols-4"
         v-if="this.customers.customerFavouriteItems.length > 0"
       >
-        <h3 class="text-base font-medium">Item Name</h3>
-        <h3 class="text-center text-base font-medium">Quantity</h3>
+        <h3 class="text-base font-medium">Nome do Item</h3>
+        <h3 class="text-center text-base font-medium">Quantidade</h3>
       </div>
       <div
         v-for="(item, index) in this.customers.customerFavouriteItems"
@@ -386,6 +386,7 @@ import { usetoggleRecentOrder } from "@/stores/recentOrder.js";
 import { useMenuStore } from "@/stores/Menu.js";
 import { useTableStore } from "@/stores/Table.js";
 import { useInvoiceDataStore } from "@/stores/invoiceData.js";
+import { translateOrderType } from "@/utils/labels.js";
 
 
 export default {
@@ -401,6 +402,9 @@ export default {
     const invoiceData = useInvoiceDataStore();
     const table=useTableStore();
     return { table,customers, auth, recentOrders,menu,invoiceData };
+  },
+  methods: {
+    translateOrderType,
   },
 };
 </script>

@@ -6,7 +6,7 @@
       <li>
         <div class="flex items-center">
           <span class="text-base font-medium text-gray-700 dark:text-gray-400"
-            >Order</span
+            >Pedido</span
           >
         </div>
       </li>

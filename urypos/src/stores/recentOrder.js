@@ -388,7 +388,7 @@ export const usetoggleRecentOrder = defineStore("recentOrders", {
             if (error._server_messages) {
               const messages = JSON.parse(error._server_messages);
               const message = JSON.parse(messages[0]);
-              this.alert.createAlert("Message", message.message, "OK");
+              this.alert.createAlert("Mensagem", message.message, "OK");
             }
           });
       }
@@ -423,8 +423,8 @@ export const usetoggleRecentOrder = defineStore("recentOrders", {
           this.table = this.pastOrder.restaurant_table;
           if (this.invoicePrinted === 0) {
             this.alert.createAlert(
-              "Alert",
-              "Please Print Invoice before Payment",
+              "Aviso",
+              "Imprima a fatura antes do pagamento",
               "OK"
             );
             this.isLoading = false;
@@ -515,7 +515,7 @@ export const usetoggleRecentOrder = defineStore("recentOrders", {
       let r_total = this.grandTotal;
       let diff = r_total - amount;
       if (diff > 5 && !this.percentage) {
-        this.alert.createAlert("Message", "Round Off Limit Exceeded", "OK");
+        this.alert.createAlert("Mensagem", "Limite de arredondamento excedido", "OK");
         this.isLoading = false;
       } else {
         this.call
@@ -524,7 +524,7 @@ export const usetoggleRecentOrder = defineStore("recentOrders", {
             invoicePayment
           )
           .then(() => {
-            this.notification.createNotification("Payment Completed");
+            this.notification.createNotification("Pagamento Concluído");
             this.getPosInvoice(this.selectedStatus, 10, 0);
             this.clearData();
           })
@@ -532,7 +532,7 @@ export const usetoggleRecentOrder = defineStore("recentOrders", {
             this.isLoading = false;
             const messages = JSON.parse(error._server_messages);
             const message = JSON.parse(messages[0]);
-            this.alert.createAlert("Message", message.message, "OK");
+            this.alert.createAlert("Mensagem", message.message, "OK");
           });
       }
     },
@@ -575,8 +575,8 @@ export const usetoggleRecentOrder = defineStore("recentOrders", {
             this.cancelReason = "";
           } else {
             this.alert.createAlert(
-              "Message",
-              "You don't Have Permission to Cancel ",
+              "Mensagem",
+              "Você não tem permissão para cancelar",
               "OK"
             );
             this.cancelInvoiceFlag = false;
@@ -596,7 +596,7 @@ export const usetoggleRecentOrder = defineStore("recentOrders", {
       this.call
         .post("ury.ury.doctype.ury_order.ury_order.cancel_order", updatedFields)
         .then(() => {
-          this.notification.createNotification("Invoice Cancelled");
+          this.notification.createNotification("Fatura Cancelada");
           window.location.reload();
         })
         .catch((error) => console.error(error));

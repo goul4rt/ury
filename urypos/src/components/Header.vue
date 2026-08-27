@@ -69,14 +69,14 @@
                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                 @click="reload"
               >
-                Reload
+                Recarregar
               </a>
 
               <a
                 href="#"
                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                 @click="this.auth.routeToHome()"
-                >Switch To Desk
+                >Ir para o Desk
               </a>
               <div class="border-t border-gray-200"></div>
               <a
@@ -84,7 +84,7 @@
                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                 @click="this.auth.logOut"
               >
-                Log out
+                Sair
               </a>
             </div>
           </div>

@@ -204,7 +204,7 @@ export const posClosing = defineStore("posClose", {
           if (error._server_messages) {
             const messages = JSON.parse(error._server_messages);
             const message = JSON.parse(messages[0]);
-            this.alert.createAlert("Message",message.message, "OK")
+            this.alert.createAlert("Mensagem",message.message, "OK")
           }
         });
     },
@@ -217,9 +217,9 @@ export const posClosing = defineStore("posClose", {
     },
     getBadgeText() {
       if (this.isPosClose == "Draft") {
-        return "Draft";
+        return "Rascunho";
       } else if (this.isPosClose == "Submitted") {
-        return "Submitted";
+        return "Enviado";
       }
     },
     showSumbitPosCloseModal() {
@@ -238,7 +238,7 @@ export const posClosing = defineStore("posClose", {
           if (error._server_messages) {
             const messages = JSON.parse(error._server_messages);
             const message = JSON.parse(messages[0]);
-            this.alert.createAlert("Message",message.message, "OK")
+            this.alert.createAlert("Mensagem",message.message, "OK")
             
           }
         });

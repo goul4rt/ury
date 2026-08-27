@@ -82,7 +82,7 @@ export const useTableStore = defineStore("table", {
       return state.isTakeaeay ? "translateX(215%)" : "translateX(0)";
     },
     tableTypeLabel(state) {
-      return state.isTakeaeay ? "Takeaway" : "Table";
+      return state.isTakeaeay ? "Viagem" : "Mesa";
     },
     tableTypeClass(state) {
       return state.isTakeaeay ? "text-left ml-1" : "text-center ml-2";
@@ -202,7 +202,7 @@ export const useTableStore = defineStore("table", {
         if (error._server_messages) {
           const messages = JSON.parse(error._server_messages);
           const message = JSON.parse(messages[0])
-          this.alert.createAlert("Message", message.message, "OK");
+          this.alert.createAlert("Mensagem", message.message, "OK");
         }
       }
     },
@@ -327,17 +327,17 @@ export const useTableStore = defineStore("table", {
     },
     getBadgeText(table) {
       if (table.occupied != 1 && table.name !== this.selectedTable) {
-        return "Free";
+        return "Livre";
       } else if (table.name === this.selectedTable) {
-        return "Active";
+        return "Ativa";
       } else if (table.occupied === 1 && table.name !== this.selectedTable) {
         const timeDifference = this.getTimeDifference(table);
         const [hours, minutes] = timeDifference.split(":");
         const totalMinutes = parseInt(hours) * 60 + parseInt(minutes);
         if (totalMinutes > this.invoiceData.tableAttention) {
-          return "Attention";
+          return "Atenção";
         } else {
-          return "Occupied";
+          return "Ocupada";
         }
       }
     },
@@ -385,8 +385,8 @@ export const useTableStore = defineStore("table", {
             ) {
               this.alert
                 .createAlert(
-                  "Message",
-                  "Table is assigned to " + this.previousOrder.waiter,
+                  "Mensagem",
+                  "Mesa atribuída a " + this.previousOrder.waiter,
                   "OK"
                 )
                 .then(() => {
@@ -395,7 +395,7 @@ export const useTableStore = defineStore("table", {
                   });
                 });
             } else {
-              this.notification.createNotification("Past Order Fetched");
+              this.notification.createNotification("Pedido Anterior Carregado");
             }
           } else {
             router.push("/Menu");
@@ -493,7 +493,7 @@ export const useTableStore = defineStore("table", {
             this.newTable = "";
             const messages = JSON.parse(error._server_messages);
             const message = JSON.parse(messages[0]);
-            this.alert.createAlert("Message", message.message, "OK");
+            this.alert.createAlert("Mensagem", message.message, "OK");
           }
         });
     },
@@ -512,7 +512,7 @@ export const useTableStore = defineStore("table", {
           )
           .then(() =>
             this.notification.createNotification(
-              "Captain Transferred Successfully"
+              "Garçom Trocado com Sucesso"
             )
           )
           .then(() => window.location.reload())
@@ -520,7 +520,7 @@ export const useTableStore = defineStore("table", {
             if (error._server_messages) {
               const messages = JSON.parse(error._server_messages);
               const message = JSON.parse(messages[0]);
-              this.alert.createAlert("Message", message.message, "OK");
+              this.alert.createAlert("Mensagem", message.message, "OK");
             }
           });
       }

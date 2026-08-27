@@ -4,7 +4,7 @@
       class="fixed inset-0 z-50 flex items-center justify-center bg-gray-300 bg-opacity-50 text-lg"
       v-if="this.invoiceData.isPrinting"
     >
-      Printing Invoice
+      Imprimindo Fatura
     </div>
     <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
       <div
@@ -59,7 +59,7 @@
                     href="#"
                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"
                     @click="this.table.openMergeFreeModal(table)"
-                    >Table Merge</a
+                    >Juntar Mesa</a
                   >
                 </li>
                 <li v-if="table.occupied === 1">
@@ -67,7 +67,7 @@
                     href="#"
                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"
                     @click="this.table.showModal = true"
-                    >Table Transfer</a
+                    >Transferir Mesa</a
                   >
                 </li>
                 <li v-if="table.occupied === 1 && this.auth.hasAccess">
@@ -75,7 +75,7 @@
                     href="#"
                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"
                     @click="this.table.showModalCaptainTransfer = true"
-                    >Captain Transfer</a
+                    >Trocar Garçom</a
                   >
                 </li>
               </ul>
@@ -120,7 +120,7 @@
                   this.table.addToSelectedTables(table)
               "
             >
-              Open Table
+              Abrir Mesa
               <svg
                 class="ml-2 h-6 w-6 dark:text-white"
                 fill="none"
@@ -154,7 +154,7 @@
                   d="M6 19H3a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h3V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v4h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-3v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-2zm0-2v-1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1h2V9H4v8h2zM8 4v3h8V4H8zm0 13v3h8v-3H8zm-3-7h3v2H5v-2z"
                 />
               </svg>
-              Bill
+              Fatura
             </button>
             <div
               class="relative inline-flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border hover:bg-blue-700 hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-300 dark:border-blue-500 dark:text-blue-500 dark:hover:bg-blue-500 dark:hover:text-white dark:focus:ring-blue-800"
@@ -195,7 +195,7 @@
     class="inset-0 mt-72 flex items-center justify-center"
   >
     <div class="text-center">
-      Tables not found. Please set takeaway tables for the room
+      Nenhuma mesa encontrada. Configure as mesas de viagem para a sala
       <span class="font-medium">{{ this.table.selectedRoom }}.</span>
     </div>
   </div>

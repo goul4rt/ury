@@ -4,7 +4,7 @@
     <!-- Loading -->
     <div v-if="loading" class="text-center py-10">
       <h2 class="text-lg font-semibold text-gray-500">
-        Loading Production Dashboard...
+        Carregando Painel de Produção...
       </h2>
     </div>
 

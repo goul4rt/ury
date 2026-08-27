@@ -114,7 +114,7 @@ export const useCustomerStore = defineStore("customers", {
       } else if (typeof name === "string") {
         this.newCustomer = name;
       } else {
-        this.alert.createAlert("Message", "Invalid Customer", "OK");
+        this.alert.createAlert("Mensagem", "Cliente Inválido", "OK");
       }
     },
     editOrderType(orderType) {
@@ -137,20 +137,20 @@ export const useCustomerStore = defineStore("customers", {
       if (!this.newCustomer || !this.newCustomerMobileNo) {
         let missingFields = [];
         if (!this.newCustomer) {
-          missingFields.push("Customer Name");
+          missingFields.push("Nome do Cliente");
         }
         if (!this.newCustomerMobileNo) {
-          missingFields.push("Mobile Number");
+          missingFields.push("Número de Celular");
         }
         if (!this.customerGroup) {
-          missingFields.push("Customer Group");
+          missingFields.push("Grupo de Clientes");
         }
         if (!this.customerTerritory) {
-          missingFields.push("Territory");
+          missingFields.push("Território");
         }
         const missingFieldsMessage =
-          "Following fields have missing values: " + missingFields.join(", ");
-        this.alert.createAlert("Message", missingFieldsMessage, "OK");
+          "Os seguintes campos estão sem valor: " + missingFields.join(", ");
+        this.alert.createAlert("Mensagem", missingFieldsMessage, "OK");
       } else {
         this.showAddNewCustomer = false;
         const db = frappe.db();
@@ -162,14 +162,14 @@ export const useCustomerStore = defineStore("customers", {
         })
           .then((doc) => {
             this.search = doc.name;
-            this.notification.createNotification("New Customer Created");
+            this.notification.createNotification("Novo Cliente Criado");
             this.showModalNewCustomer = false;
           })
           .catch((error) => {
             const serverMessages = JSON.parse(error._server_messages);
             const messageObject = JSON.parse(serverMessages[0]);
             const message = messageObject.message;
-            this.alert.createAlert("Message", message, "OK");
+            this.alert.createAlert("Mensagem", message, "OK");
           });
       }
     },

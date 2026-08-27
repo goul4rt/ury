@@ -18,7 +18,7 @@ export function loadQzPrinter(host){
             }).catch((err)=>{
                 reject({
                     custom:true,
-                    title:"Error during fetching certificate",
+                    title:"Erro ao buscar o certificado",
                     message:err
                 });
             })
@@ -32,7 +32,7 @@ export function loadQzPrinter(host){
             .catch((err)=>{
                 reject({
                     custom:true,
-                    title:"Error during connection to printer",
+                    title:"Erro ao conectar com a impressora",
                     message:String(err)
                 });
             })
@@ -81,7 +81,7 @@ export function printWithQz(host,htmlToPrint){
                         reject(
                             {
                                 custom: true,
-                                title: "Print failed",
+                                title: "Falha na impressão",
                                 message: String(e)
                             }
                         );
@@ -91,7 +91,7 @@ export function printWithQz(host,htmlToPrint){
                     qz.websocket.disconnect();
                     reject({
                         custom:true,
-                        title:"Error looking up for printer",
+                        title:"Erro ao procurar a impressora",
                         message:String(err)
                     })
             })

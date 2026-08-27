@@ -33,7 +33,7 @@
         type="search"
         id="default-search"
         class="block w-full rounded border border-gray-300 bg-gray-50 px-10 pb-2 pt-2.5 text-sm font-medium text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-        placeholder="Item Search"
+        placeholder="Buscar Item"
         v-model="this.menu.searchTerm"
         @input="this.menu.handleSearchInput"
         @click="this.menu.clearSearch"
@@ -48,7 +48,7 @@
         <label
           for="first"
           class="absolute z-50 -mt-2 ml-2 bg-white px-2 text-xs"
-          >Select Course</label
+          >Selecionar Categoria</label
         >
         <select
           class="relative w-full rounded border border-gray-300 bg-gray-50 pt-2.5 text-sm"
@@ -71,7 +71,7 @@
         :class="{ 'bg-blue-900': this.menu.priority }"
         @click="this.menu.showSpecialItems"
       >
-        Priority
+        Prioridade
       </button>
       <button
         class="focus:shadow-outline w-28 rounded bg-blue-700 p-2 font-bold text-white hover:bg-blue-900 focus:outline-blue-500"
@@ -79,7 +79,7 @@
         :class="{ 'bg-blue-900': this.menu.displayAll }"
         @click="this.menu.showAllItems"
       >
-        All
+        Todos
       </button>
     </div>
   </div>

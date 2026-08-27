@@ -10,7 +10,7 @@
   >
     <div class="relative">
       <label for="first" class="absolute z-50 ml-2 mt-0.5 bg-white px-2 text-xs"
-        >Select Room</label
+        >Selecionar Sala</label
       >
       <select
         class="relative mt-2 w-full rounded border border-gray-300 bg-gray-50"
@@ -48,7 +48,7 @@
         <label
           for="first"
           class="absolute z-50 ml-2 mt-0.5 bg-white px-2 text-xs"
-          >Order Type</label
+          >Tipo de Pedido</label
         >
         <select
           class="relative mt-2 w-full rounded border border-gray-300 bg-gray-50"
@@ -61,8 +61,9 @@
           <option
             v-for="(type, index) in menu.orderType"
             :key="index"
+            :value="type.name"
            >
-            {{ type.name }}
+            {{ translateOrderType(type.name) }}
           </option>
         </select>
       </div>
@@ -72,7 +73,7 @@
       v-if="this.menu.selectedOrderType === 'Aggregators' && this.auth.cashier"
     >
       <label for="first" class="absolute z-50 ml-2 mt-0.5 bg-white px-2 text-xs"
-        >Aggregators List</label
+        >Lista de Agregadores</label
       >
       <select
         class="relative mt-2 w-full rounded border border-gray-300 bg-gray-50"
@@ -98,7 +99,7 @@
         class="fixed inset-0 z-50 flex items-center justify-center bg-gray-300 bg-opacity-50 text-lg"
         v-if="this.invoiceData.isPrinting"
       >
-        Printing Invoice
+        Imprimindo Fatura
       </div>
       <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
         <div
@@ -156,7 +157,7 @@
                       href="#"
                       class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"
                       @click="this.table.openMergeFreeModal(table)"
-                      >Table Merge</a
+                      >Juntar Mesa</a
                     >
                   </li>
                   <li v-if="table.occupied === 1">
@@ -164,7 +165,7 @@
                       href="#"
                       class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"
                       @click="this.table.showModal = true"
-                      >Table Transfer</a
+                      >Transferir Mesa</a
                     >
                   </li>
                   <li v-if="table.occupied === 1 && this.auth.hasAccess">
@@ -172,7 +173,7 @@
                       href="#"
                       class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"
                       @click="this.table.showModalCaptainTransfer = true"
-                      >Captain Transfer</a
+                      >Trocar Garçom</a
                     >
                   </li>
                 </ul>
@@ -221,7 +222,7 @@
                     this.table.addToSelectedTables(table)
                 "
               >
-                Open Table
+                Abrir Mesa
                 <svg
                   class="ml-2 h-6 w-6 dark:text-white"
                   fill="none"
@@ -256,7 +257,7 @@
                   />
                 </svg>
 
-                Bill
+                Fatura
               </button>
 
               <div
@@ -298,7 +299,7 @@
       class="inset-0 mt-72 flex items-center justify-center"
     >
       <div class="text-center">
-        Tables not found. Please set tables for the room
+        Nenhuma mesa encontrada. Configure as mesas para a sala
         <span class="font-medium">{{ this.table.selectedRoom }}.</span>
       </div>
     </div>
@@ -314,7 +315,7 @@
     <div class="mt-20 flex items-center justify-center">
       <div class="mt-10 w-full rounded bg-white p-6 shadow-lg md:max-w-md">
         <div class="flex justify-end">
-          <span class="sr-only">Close</span>
+          <span class="sr-only">Fechar</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-5 w-5"
@@ -335,14 +336,14 @@
         <h2
           class="mt-1 block text-left text-xl font-medium text-gray-900 dark:text-white"
         >
-          Table Transfer
+          Transferir Mesa
         </h2>
         <div class="relative" ref="container">
           <label
             for="newTable"
             class="mt-6 block text-left text-gray-900 dark:text-white"
           >
-            New Table
+            Nova Mesa
           </label>
           <input
             type="text"
@@ -374,7 +375,7 @@
           for="newTable"
           class="mt-6 block text-left text-gray-900 dark:text-white"
         >
-          Current Table
+          Mesa Atual
         </label>
         <input
           type="text"
@@ -391,7 +392,7 @@
             "
             class="mt-8 rounded bg-blue-700 px-3 py-2 text-white hover:bg-blue-600"
           >
-            Transfer
+            Transferir
           </button>
         </div>
       </div>
@@ -405,7 +406,7 @@
     <div class="mt-20 flex items-center justify-center">
       <div class="mt-10 w-full rounded bg-white p-6 shadow-lg md:max-w-md">
         <div class="flex justify-end">
-          <span class="sr-only">Close</span>
+          <span class="sr-only">Fechar</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-5 w-5 cursor-pointer"
@@ -418,12 +419,12 @@
           </svg>
         </div>
         <h2 class="mt-1 block text-left text-xl font-medium text-gray-900 dark:text-white">
-          Merge with {{ table.mergeSourceTable }}
+          Juntar com {{ table.mergeSourceTable }}
         </h2>
         <div class="mt-4 text-left">
-          <label for="mergeSelect" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Select Table to Merge</label>
+          <label for="mergeSelect" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Selecionar Mesa para Juntar</label>
           <select id="mergeSelect" v-model="table.selectedMergedTable" class="mt-1 block w-full rounded border-gray-300 py-2 pl-3 pr-10 text-base focus:border-blue-500 focus:outline-none focus:ring-blue-500 sm:text-sm dark:bg-gray-700 dark:text-white dark:border-gray-600">
-            <option value="" disabled>Select a table</option>
+            <option value="" disabled>Selecione uma mesa</option>
             <option v-for="(t, index) in table.transferTable" :key="index" :value="t.name">{{t.name}}</option>
           </select>
         </div>
@@ -437,7 +438,7 @@
             :disabled="!table.selectedMergedTable"
             :class="{'opacity-50 cursor-not-allowed': !table.selectedMergedTable}"
           >
-            Merge Tables
+            Juntar Mesas
           </button>
         </div>
       </div>
@@ -451,7 +452,7 @@
     <div class="mt-20 flex items-center justify-center">
       <div class="mt-10 w-full rounded bg-white p-6 shadow-lg md:max-w-md">
         <div class="flex justify-end">
-          <span class="sr-only">Close</span>
+          <span class="sr-only">Fechar</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-5 w-5"
@@ -471,14 +472,14 @@
         <h2
           class="mt-1 block text-left text-xl font-medium text-gray-900 dark:text-white"
         >
-          Captain Transfer
+          Trocar Garçom
         </h2>
         <div class="relative" ref="container">
           <label
             for="newTable"
             class="mt-6 block text-left text-gray-900 dark:text-white"
           >
-            New Captain
+            Novo Garçom
           </label>
           <input
             type="text"
@@ -510,7 +511,7 @@
           for="newTable"
           class="mt-6 block text-left text-gray-900 dark:text-white"
         >
-          Current Captain
+          Garçom Atual
         </label>
         <input
           type="text"
@@ -527,7 +528,7 @@
             "
             class="mt-8 rounded bg-blue-700 px-3 py-2 text-white hover:bg-blue-600"
           >
-            Transfer
+            Transferir
           </button>
         </div>
       </div>
@@ -542,6 +543,7 @@ import { useMenuStore } from "@/stores/Menu.js";
 import takeAwayTable from "./takeAwayTable.vue";
 import { usetoggleRecentOrder } from "@/stores/recentOrder.js";
 import { useInvoiceDataStore } from "@/stores/invoiceData.js";
+import { translateOrderType } from "@/utils/labels.js";
 
 export default {
   name: "Table",
@@ -554,8 +556,11 @@ export default {
     const auth = useAuthStore();
     const menu = useMenuStore();
     const recentOrders = usetoggleRecentOrder();
-    
+
     return { table, invoiceData, auth, menu,recentOrders };
+  },
+  methods: {
+    translateOrderType,
   },
 };
 </script>

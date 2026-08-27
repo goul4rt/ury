@@ -25,8 +25,8 @@ export const tabFunctions = defineStore("tabClick", {
       if (!this.table.selectedTable) {
         this.alert
           .createAlert(
-            "No Active Table",
-            "You have not selected an active table",
+            "Nenhuma Mesa Ativa",
+            "Você não selecionou uma mesa ativa",
             "Ok"
           )
           .then(() => {
@@ -38,8 +38,8 @@ export const tabFunctions = defineStore("tabClick", {
       if (!this.auth.cashier && !this.table.selectedTable) {
         this.alert
           .createAlert(
-            "No Active Table",
-            "You have not selected an active table",
+            "Nenhuma Mesa Ativa",
+            "Você não selecionou uma mesa ativa",
             "Ok"
           )
           .then(() => {
@@ -49,8 +49,8 @@ export const tabFunctions = defineStore("tabClick", {
       if (this.auth.cashier && !this.menu.selectedOrderType) {
         this.alert
           .createAlert(
-            "No Order Type",
-            "Please select an Order Type",
+            "Nenhum Tipo de Pedido",
+            "Selecione um Tipo de Pedido",
             "Ok"
           )
           .then(() => {
@@ -63,7 +63,7 @@ export const tabFunctions = defineStore("tabClick", {
         !this.menu.selectedAggregator
       ) {
         this.alert
-          .createAlert("No Aggregator", "Please select an Aggregator", "Ok")
+          .createAlert("Nenhum Agregador", "Selecione um Agregador", "Ok")
           .then(() => {
             router.push("/Table");
           });

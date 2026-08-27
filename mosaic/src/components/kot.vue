@@ -13,12 +13,12 @@
             <span
               class="w-3 h-3 rounded-full inline-block mr-1 bg-red-500"
             ></span>
-            Not Permitted
+            Não Permitido
           </p>
           <hr class="border-gray-200" />
 
           <p class="text-left text-xl mt-6 font-medium text-gray-500">
-            Log in to access this page.
+            Faça login para acessar esta página.
           </p>
 
           <div class="flex justify">
@@ -29,7 +29,7 @@
               "
               class="mt-8 rounded bg-blue-500 px-3 py-2 text-white hover:bg-blue-600"
             >
-              Login
+              Entrar
             </button>
           </div>
         </div>
@@ -38,7 +38,7 @@
     <!-- Alert Modal div end-->
 
     <div v-if="kot.filter(k => k.production === production).length === 0 && !loadingKots" class="text-center py-10 text-gray-500 text-xl">
-      No active orders for {{ production }}
+      Nenhum pedido ativo para {{ production }}
     </div>
 
     <div
@@ -68,8 +68,8 @@
               >
                 {{
                   kot.type === "Cancelled" || kot.type === "Partially cancelled"
-                    ? "Confirm"
-                    : "Serve"
+                    ? "Confirmar"
+                    : "Servir"
                 }}
               </button>
             </div>
@@ -81,9 +81,9 @@
               <div class="flex justify-between" @click="rotateCard(kot)">
                 <div class="text-sm w-48">
                   <span
-                    v-if="kot.tableortakeaway !== 'Takeaway'"
+                    v-if="kot.tableortakeaway !== 'Viagem'"
                     class="text-sm font-medium text-[#6B7280]"
-                    >Table
+                    >Mesa
                   </span>
                   <span class="text-black-500 font-semibold">
                     {{ kot.tableortakeaway }}
@@ -91,15 +91,15 @@
                       >( {{ kot.user }} )</span
                     ></span
                   ><br />
-                  <span v-if="kot.is_aggregator" class="text-sm font-medium text-[#6B7280]">Aggregator</span>
+                  <span v-if="kot.is_aggregator" class="text-sm font-medium text-[#6B7280]">Agregador</span>
                   <span v-if="kot.is_aggregator" class="text-black-500 ml-2 font-semibold"
                     >{{ kot.customer_name }}
                   </span><br v-if="kot.is_aggregator" />
-                  <span v-if="kot.is_aggregator" class="text-sm font-medium text-[#6B7280]">Aggregator ID</span>
+                  <span v-if="kot.is_aggregator" class="text-sm font-medium text-[#6B7280]">ID do Agregador</span>
                   <span v-if="kot.is_aggregator" class="text-black-500 ml-2 font-semibold"
                     >{{ kot.aggregator_id }}
                   </span><br v-if="kot.is_aggregator"/>
-                  <span class="text-sm font-medium text-[#6B7280]">Order</span>
+                  <span class="text-sm font-medium text-[#6B7280]">Pedido</span>
                   <span class="text-black-500 ml-2 font-semibold"
                     >{{ this.daily_order_number ? kot.order_no : kot.invoice.slice(-4) }}
                     
@@ -111,7 +111,7 @@
                       kot.type === 'Cancelled'
                     "
                   >
-                    ( {{ kot.type }} )</span
+                    ( {{ kot.type === 'Cancelled' ? 'Cancelado' : 'Parcialmente Cancelado' }} )</span
                   >
                 </div>
                 <div
@@ -125,7 +125,7 @@
                 v-if="kot.type === 'Duplicate'"
                 class="text-[#DC0000] font-medium"
               >
-                ( Duplicate KOT ( CHECK WITH CAPTAIN ) )
+                ( KOT Duplicado ( CONFIRME COM O GARÇOM ) )
               </div>
               <div v-show="kot.comments" class="text-[#6B7280] font-medium">
                 ( {{ kot.comments }} )
@@ -160,7 +160,7 @@
                           kot.type === 'Partially cancelled' ||
                           kot.type === 'Cancelled'
                         "
-                        >[Old Qty = {{ kotitem.quantity }}]</span
+                        >[Qtd. Anterior = {{ kotitem.quantity }}]</span
                       >
                     </div>
                     <div>
@@ -190,7 +190,7 @@
       v-if="showAudioAlertMessage"
       class="absolute top-1 left-1/2 transform -translate-x-1/2 p-2 font-bold text-2xl text-red-500 text-center"
     >
-      Audio notifications disabled. Click anywhere to enable.
+      Notificações sonoras desativadas. Clique em qualquer lugar para ativar.
     </div>
 
     <div
@@ -406,10 +406,10 @@ export default {
 
     updateColorandTable(kot, restaurant_table, type, table_takeaway, custom_merged_tables) {
       if (restaurant_table === undefined) {
-        kot.tableortakeaway = "Takeaway";
+        kot.tableortakeaway = "Viagem";
       } else {
         if (table_takeaway == 1) {
-          kot.tableortakeaway = "Takeaway";
+          kot.tableortakeaway = "Viagem";
         } else {
           let label = restaurant_table;
           if (custom_merged_tables) {
@@ -546,7 +546,7 @@ export default {
     },
     handleOnline() {
       this.isOnline = true;
-      this.setStatusMessage("You are online");
+      this.setStatusMessage("Você está online");
       this.hideStatusMessageAfterDelay();
       this.fetchKOT().then(() => {
         this.masonryLoading();
@@ -554,7 +554,7 @@ export default {
     },
     handleOffline() {
       this.isOnline = false;
-      this.setStatusMessage("You are Offline");
+      this.setStatusMessage("Você está offline");
     },
     setStatusMessage(message) {
       this.statusMessage = message;

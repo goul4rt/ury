@@ -58,7 +58,7 @@ export const useAuthStore = defineStore("auth", {
         localStorage.setItem("userAuth", "true");
         await this.fetchUserDetails();
       } catch (error) {
-        this.alert.createAlert("Message", error.message, "OK");
+        this.alert.createAlert("Mensagem", error.message, "OK");
       }
     },
     checkAuthState() {
@@ -165,7 +165,7 @@ export const useAuthStore = defineStore("auth", {
           .then((result) => {
             var currentDomain = window.location.origin;
             if (!result.message.opening_exists) {
-              this.alert.createAlert("Message", "POS Opening Entry is not created", "OK").then(() => {
+              this.alert.createAlert("Mensagem", "A Abertura de Caixa não foi criada", "OK").then(() => {
                 window.location.href = currentDomain + "/app/";
               });
             }
@@ -177,12 +177,12 @@ export const useAuthStore = defineStore("auth", {
             const innerMessageString = serverMessages[0];
             const innerMessage = JSON.parse(innerMessageString);
             const message = innerMessage.message;
-            this.alert.createAlert("Message", message, "OK").then(() => {
+            this.alert.createAlert("Mensagem", message, "OK").then(() => {
               window.location.href = currentDomain + "/app/";
             });
 
           });
-      } 
+      }
       else {
         this.call
           .get("ury.ury_pos.api.posOpening")
@@ -197,7 +197,7 @@ export const useAuthStore = defineStore("auth", {
             //   });
             // } else {
             var currentDomain = window.location.origin;
-            this.alert.createAlert("Message", message, "OK").then(() => {
+            this.alert.createAlert("Mensagem", message, "OK").then(() => {
               window.location.href = currentDomain + "/app/";
             });
             // }
@@ -217,7 +217,7 @@ export const useAuthStore = defineStore("auth", {
           if (result.message === "Failed") {
             var currentDomain = window.location.origin;
             this.alert
-              .createAlert("Message", "Please close previous POS Entry", "OK")
+              .createAlert("Mensagem", "Feche o Fechamento de Caixa anterior", "OK")
               .then(() => {
                 window.location.href = currentDomain + "/app/";
               });

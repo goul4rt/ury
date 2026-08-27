@@ -61,7 +61,7 @@
             "
             class="mt-2 rounded border px-10 pb-2 pt-2.5 text-xs font-medium leading-normal"
           >
-            ADD +
+            ADICIONAR +
           </button>
         </div>
         <div v-if="item.qty" class="mt-2 flex rounded-md text-center">
@@ -111,7 +111,7 @@
         <div class="mt-10 flex items-center justify-center">
           <div class="w-full rounded-lg bg-white p-6 shadow-lg md:max-w-md">
             <div class="flex justify-end">
-              <span class="sr-only">Close</span>
+              <span class="sr-only">Fechar</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-5 w-5"
@@ -132,14 +132,14 @@
             <h2
               class="mt-1 block text-left text-xl font-medium text-gray-900 dark:text-white"
             >
-              Enter Details
+              Inserir Detalhes
             </h2>
             <div class="relative">
               <label
                 for="quantity"
                 class="mt-6 block text-left text-gray-900 dark:text-white"
               >
-                Quantity
+                Quantidade
               </label>
               <input
                 type="number"
@@ -156,7 +156,7 @@
                 for="comments"
                 class="mt-6 block text-left text-gray-900 dark:text-white"
               >
-                Comments
+                Observações
               </label>
               <input
                 type="text"
@@ -170,7 +170,7 @@
                 @click="this.menu.addToCartAndUpdateQty(item)"
                 class="mt-8 rounded bg-blue-500 px-3 py-2 text-white hover:bg-blue-600"
               >
-                Add
+                Adicionar
               </button>
             </div>
           </div>
@@ -184,11 +184,11 @@
       class="flex h-screen items-center justify-center"
     >
       <div class="text-center">
-        Items Not Found. Please select a table or set an active menu.
+        Itens não encontrados. Selecione uma mesa ou defina um cardápio ativo.
       </div>
     </div>
     <div v-else class="flex h-screen items-center justify-center">
-      <div class="text-center">Items Not Found.</div>
+      <div class="text-center">Itens não encontrados.</div>
     </div>
   </div>
   <div
@@ -201,7 +201,7 @@
       @click="this.menu.currentPage -= 1"
       class="mr-2 rounded-md border px-2 py-1"
     >
-      Previous
+      Anterior
     </button>
     <div v-for="pageNumber in this.menu.pageNumbers">
       <button
@@ -232,7 +232,7 @@
       :class="{ hidden: this.menu.currentPage === this.menu.totalPages }"
       class="rounded-md border px-2 py-1"
     >
-      Next
+      Próxima
     </button>
   </div>
 </template>

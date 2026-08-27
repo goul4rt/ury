@@ -3,13 +3,13 @@
     class="fixed inset-0 z-50 flex items-center justify-center bg-gray-300 bg-opacity-50 text-lg"
     v-if="this.invoiceData.invoiceUpdating"
   >
-    Updating Order...
+    Atualizando Pedido...
   </div>
   <div
     class="fixed inset-0 z-50 flex items-center justify-center bg-gray-300 bg-opacity-50 text-lg"
     v-if="this.invoiceData.kotPrinting"
   >
-    KOT Reprinting...
+    Reimprimindo KOT...
   </div>
   <div class="mt-5 flex">
     <div class="flex-grow">
@@ -21,14 +21,14 @@
         v-if="this.invoiceData.showUpdateButtton === true"
         @click="this.invoiceData.invoiceCreation()"
       >
-        Update
+        Atualizar
       </button>
       <button
       class="mr-4 rounded py-2 px-4 shadow"
       v-if="this.invoiceData.enableKotReprint"
       @click="this.invoiceData.kotReprint()"
       >
-        KOT Reprint
+        Reimprimir KOT
       </button>
       <button
         class="rounded px-4 py-2 shadow"
@@ -39,7 +39,7 @@
         "
         @click="this.invoiceData.showCancelInvoiceModal()"
       >
-        Cancel
+        Cancelar
       </button>
     </div>
   </div>
@@ -47,7 +47,7 @@
     class="flex h-screen items-center justify-center"
     v-if="this.menu.cart.length === 0"
   >
-    <div class="text-center">Nothing to show here</div>
+    <div class="text-center">Nada para exibir aqui</div>
   </div>
 
   <div class="mt-5 border shadow" v-if="this.menu.cart.length > 0">
@@ -57,12 +57,12 @@
       <h3
         class="ml-3 mt-2 text-base font-semibold text-gray-900 dark:text-white"
       >
-        Item Name
+        Nome do Item
       </h3>
       <h3
         class="ml-3 mt-2 text-center text-lg font-semibold text-gray-900 dark:text-white"
       >
-        Quantity
+        Quantidade
       </h3>
     </div>
     <div
@@ -121,7 +121,7 @@
       for="grand_total"
       class="mt-6 block text-left text-gray-900 dark:text-white"
     >
-      Grand Total
+      Total Geral
     </label>
     <input
       class="grand_total mt-3 block w-full rounded-md border bg-gray-50 p-2.5 text-sm text-gray-900 md:w-3/5 lg:w-2/5"
@@ -135,7 +135,7 @@
       class="mt-6 block text-left text-gray-900 dark:text-white"
       v-if="this.menu.selectedOrderType === 'Aggregators'"
     >
-      Aggregator ID
+      ID do Agregador
     </label>
     <input
       v-if="this.menu.selectedOrderType === 'Aggregators'"
@@ -147,7 +147,7 @@
       for="Comments"
       class="mt-6 block text-left text-gray-900 dark:text-white"
     >
-      Comments
+      Observações
     </label>
     <input
       id="comments"
@@ -163,7 +163,7 @@
     <div class="mt-20 flex items-center justify-center">
       <div class="w-full rounded-lg bg-white p-6 shadow-lg md:max-w-md">
         <div class="flex justify-end">
-          <span class="sr-only">Close</span>
+          <span class="sr-only">Fechar</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-5 w-5"
@@ -183,14 +183,14 @@
         <h2
           class="mt-1 block text-left text-xl font-medium text-gray-900 dark:text-white"
         >
-          Are you sure to cancel
+          Tem certeza que deseja cancelar?
         </h2>
         <div class="relative">
           <label
             for="cancelReason"
             class="mt-6 block text-left text-gray-900 dark:text-white"
           >
-            Reason
+            Motivo
           </label>
           <input
             type="text"
@@ -204,13 +204,13 @@
             @click="this.invoiceData.cancelInvoiceFlag = false"
             class="mr-3 mt-6 rounded border border-gray-300 bg-gray-50 px-3 py-2"
           >
-            No
+            Não
           </button>
           <button
             @click="handleConfirmCancellation()"
             class="mt-6 rounded bg-blue-500 px-3 py-2 text-white hover:bg-blue-600"
           >
-            Yes
+            Sim
           </button>
         </div>
       </div>
@@ -224,7 +224,7 @@
     <div class="mt-10 flex items-center justify-center">
       <div class="w-full rounded-lg bg-white p-6 shadow-lg md:max-w-md">
         <div class="flex justify-end">
-          <span class="sr-only">Close</span>
+          <span class="sr-only">Fechar</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-5 w-5"
@@ -245,14 +245,14 @@
         <h2
           class="mt-1 block text-left text-xl font-medium text-gray-900 dark:text-white"
         >
-          Enter Details
+          Inserir Detalhes
         </h2>
         <div class="relative">
           <label
             for="quantity"
             class="mt-6 block text-left text-gray-900 dark:text-white"
           >
-            Quantity
+            Quantidade
           </label>
           <input
             type="number"
@@ -269,7 +269,7 @@
             for="Comments"
             class="mt-6 block text-left text-gray-900 dark:text-white"
           >
-            Comments
+            Observações
           </label>
           <input
             type="text"
@@ -286,7 +286,7 @@
             "
             class="mt-8 rounded bg-blue-500 px-3 py-2 text-white hover:bg-blue-600"
           >
-            Add
+            Adicionar
           </button>
         </div>
       </div>
@@ -299,7 +299,7 @@
   >
     <details>
       <summary class="question w-full cursor-pointer select-none py-3">
-        Additional Details
+        Detalhes Adicionais
       </summary>
       <div class="additional-details m-3">
         <label
@@ -307,7 +307,7 @@
           class="mt-10 block text-sm font-medium text-gray-900 dark:text-white"
           v-if="this.table.invoiceNo || invoiceData.invoiceNumber"
         >
-          Invoice
+          Fatura
         </label>
         <input
           class="invoiceNo mt-3 block w-full rounded-md border bg-gray-50 p-2.5 text-sm text-gray-900 md:w-3/5 lg:w-2/5"
@@ -320,7 +320,7 @@
           class="mt-10 block text-sm font-medium text-gray-900 dark:text-white"
           :class="{ hidden: this.invoiceData.waiter === '' }"
         >
-          Waiter
+          Garçom
         </label>
         <input
           class="waiter mt-3 block w-full rounded-md border bg-gray-50 p-2.5 text-sm text-gray-900 md:w-3/5 lg:w-2/5"
@@ -341,7 +341,7 @@
           class="mt-10 block text-sm font-medium text-gray-900 dark:text-white"
           :class="{ hidden: this.invoiceData.posProfile === '' }"
         >
-          POS Profile
+          Perfil de PDV
         </label>
         <input
           class="posProfile mt-3 block w-full rounded-md border bg-gray-50 p-2.5 text-sm text-gray-900 md:w-3/5 lg:w-2/5"
@@ -354,7 +354,7 @@
           class="mt-10 block text-sm font-medium text-gray-900 dark:text-white"
           :class="{ hidden: this.invoiceData.cashier === '' }"
         >
-          Cashier
+          Caixa
         </label>
         <input
           class="mt-3 block w-full rounded-md border bg-gray-50 p-2.5 text-sm text-gray-900 md:w-3/5 lg:w-2/5"
@@ -386,7 +386,7 @@ export default {
       console.log(this.invoiceData.cancelReason);
       console.log(!this.invoiceData.cancelReason || this.invoiceData.cancelReason.trim() === '');
       if (!this.invoiceData.cancelReason || this.invoiceData.cancelReason.trim() === '') {
-        this.notification.createNotification('Please enter a reason for cancellation');
+        this.notification.createNotification('Informe o motivo do cancelamento');
         return;
       }
       this.invoiceData.cancelInvoice();

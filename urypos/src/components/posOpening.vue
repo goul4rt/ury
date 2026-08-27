@@ -2,7 +2,7 @@
   <div class="mt-10 flex items-center justify-between">
     <div class="flex items-center">
       <h3 class="mr-3 text-lg font-semibold text-gray-900 dark:text-white">
-        POS Opening Entry
+        Abertura de Caixa
       </h3>
       <span
         class="me-2 rounded px-2.5 py-0.5 text-sm font-medium"
@@ -23,14 +23,14 @@
         class="rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 focus:outline-none"
         v-if="this.posOpen.posOpencreation"
       >
-        Save
+        Salvar
       </button>
       <button
         v-if="this.posOpen.posOpenSaved"
         @click="this.posOpen.showSumbitPosOpenModal()"
         class="rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 focus:outline-none"
       >
-        Submit
+        Enviar
       </button>
     </div>
   </div>
@@ -40,7 +40,7 @@
       <label
         for="startDate"
         class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-        >Period Start Date</label
+        >Data de Início do Período</label
       >
       <date-picker
         v-model:value="this.posOpen.startDate"
@@ -57,7 +57,7 @@
         <label
           for="postingDate"
           class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-          >Posting Date</label
+          >Data de Lançamento</label
         >
       </label>
       <input
@@ -74,7 +74,7 @@
       <label
         for="company"
         class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-        >Company</label
+        >Empresa</label
       >
       <input
         type="text"
@@ -88,7 +88,7 @@
       <label
         for="cashier"
         class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-        >Cashier</label
+        >Caixa</label
       >
       <input
         type="text"
@@ -102,7 +102,7 @@
       <label
         for="posProfile"
         class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-        >POS Profile</label
+        >Perfil de PDV</label
       >
       <input
         type="text"
@@ -116,7 +116,7 @@
       <label
         for="branch"
         class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-        >Branch</label
+        >Filial</label
       >
       <input
         type="text"
@@ -129,7 +129,7 @@
   </div>
   <hr class="my-6 border-t border-gray-300" />
   <h3 class="mb-3 text-base font-semibold text-gray-900 dark:text-white">
-    Opening Balance Details
+    Detalhes do Saldo de Abertura
   </h3>
 
   <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -138,8 +138,8 @@
         class="bg-gray-50 text-base font-semibold uppercase text-gray-900 dark:text-white"
       >
         <tr>
-          <th scope="col" class="px-6 py-3">Mode of Payment</th>
-          <th scope="col" class="px-6 py-3 text-center">Opening Amount</th>
+          <th scope="col" class="px-6 py-3">Forma de Pagamento</th>
+          <th scope="col" class="px-6 py-3 text-center">Valor de Abertura</th>
           <th scope="col" class="px-6 py-3"></th>
         </tr>
       </thead>
@@ -205,8 +205,8 @@
     <div class="mt-5 flex items-center justify-center">
       <div class="w-full rounded-lg bg-white p-6 shadow-lg md:max-w-md">
         <div class="flex items-center justify-between">
-          <h3 class="text-xl text-gray-900 dark:text-white">Confirm</h3>
-          <span class="sr-only">Close</span>
+          <h3 class="text-xl text-gray-900 dark:text-white">Confirmar</h3>
+          <span class="sr-only">Fechar</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-5 w-5 cursor-pointer"
@@ -227,20 +227,20 @@
         <h3
           class="mt-5 block text-left text-base text-gray-900 dark:text-white"
         >
-          Permanently Submit{{ this.posOpen.posOpenEntryName }}?
+          Enviar {{ this.posOpen.posOpenEntryName }} definitivamente?
         </h3>
         <div class="flex justify-end">
           <button
             @click="this.posOpen.showSumbitPosOpen = false"
             class="mr-3 mt-6 rounded border border-gray-300 bg-gray-50 px-3 py-2"
           >
-            No
+            Não
           </button>
           <button
             @click="this.posOpen.sumbitPosOpening()"
             class="mt-6 rounded bg-blue-500 px-3 py-2 text-white hover:bg-blue-600"
           >
-            Yes
+            Sim
           </button>
         </div>
       </div>

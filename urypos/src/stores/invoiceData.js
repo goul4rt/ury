@@ -103,8 +103,8 @@ export const useInvoiceDataStore = defineStore("invoiceData", {
                 .catch((error) => {
                   if (error._server_messages) {
                     this.alert.createAlert(
-                      "Message",
-                      "You do not have Read or Select Permissions for Currency",
+                      "Mensagem",
+                      "Você não tem permissão de leitura para Moeda",
                       "OK"
                     );
                   }
@@ -113,8 +113,8 @@ export const useInvoiceDataStore = defineStore("invoiceData", {
             .catch((error) => {
               if (error._server_messages) {
                 this.alert.createAlert(
-                  "Message",
-                  "You do not have Read or Select Permissions for Company",
+                  "Mensagem",
+                  "Você não tem permissão de leitura para Empresa",
                   "OK"
                 );
               }
@@ -124,7 +124,7 @@ export const useInvoiceDataStore = defineStore("invoiceData", {
         if (error._server_messages) {
           const messages = JSON.parse(error._server_messages);
           const message = JSON.parse(messages[0]);
-          this.alert.createAlert("Message", message.message, "OK");
+          this.alert.createAlert("Mensagem", message.message, "OK");
         }
       }
       this.call
@@ -216,7 +216,7 @@ export const useInvoiceDataStore = defineStore("invoiceData", {
         Object.entries(originalItems).forEach(([itemCode, itemData]) => {
           if (currentItems[itemCode] && currentItems[itemCode].qty < itemData.qty) {
             reducedQtyItems.push(
-              `${itemData.name} (qty reduced from ${itemData.qty} to ${currentItems[itemCode].qty})`
+              `${itemData.name} (qtd. reduzida de ${itemData.qty} para ${currentItems[itemCode].qty})`
             );
           }
         });
@@ -229,18 +229,18 @@ export const useInvoiceDataStore = defineStore("invoiceData", {
             const removedItemNames = removedItems.map(
               itemCode => originalItems[itemCode].name
             );
-            errorMsg.push(`Removed items: ${removedItemNames.join(', ')}\n`);
+            errorMsg.push(`Itens removidos: ${removedItemNames.join(', ')}\n`);
           }
           if (reducedQtyItems.length > 0) {
-            errorMsg.push(`Modified quantities: ${reducedQtyItems.join(',\n')}`);
+            errorMsg.push(`Quantidades modificadas: ${reducedQtyItems.join(',\n')}`);
           }
-    
+
           // Show confirmation modal and wait for user response
           await new Promise((resolve, reject) => {
             this.notificationModal.showModal({
-              title: "Are You Sure to remove these items?",
+              title: "Tem certeza que deseja remover esses itens?",
               message: errorMsg.join('\n'),
-              actionText: "Yes",
+              actionText: "Sim",
               showCancelButton: true,
               onConfirm: () => {
                 this.invoiceUpdating = true;
@@ -279,8 +279,8 @@ export const useInvoiceDataStore = defineStore("invoiceData", {
       };
       if (!this.auth.cashier && !numberOfPax && this.table.takeAwayTable == 0) {
         this.alert.createAlert(
-          "Message",
-          "Please Select Customer / No of Pax",
+          "Mensagem",
+          "Selecione o Cliente / Nº de Pessoas",
           "OK"
         );
         this.showUpdateButtton = true;
@@ -289,14 +289,14 @@ export const useInvoiceDataStore = defineStore("invoiceData", {
       }
     
       if (!this.auth.cashier && !selectedTables) {
-        this.alert.createAlert("Message", "Please Select a Table", "OK");
+        this.alert.createAlert("Mensagem", "Selecione uma Mesa", "OK");
         this.showUpdateButtton = true;
         this.invoiceUpdating = false;
         return;
       }
     
       if (this.auth.cashier && !ordeType && !selectedTables) {
-        this.alert.createAlert("Message", "Please Select Order Type", "OK");
+        this.alert.createAlert("Mensagem", "Selecione o Tipo de Pedido", "OK");
         this.showUpdateButtton = true;
         this.invoiceUpdating = false;
         return;
@@ -314,16 +314,16 @@ export const useInvoiceDataStore = defineStore("invoiceData", {
           const messages = JSON.parse(alert);
           const message = JSON.parse(messages[0]);
     
-          await this.alert.createAlert("Message", message.message, "OK");
+          await this.alert.createAlert("Mensagem", message.message, "OK");
           await router.push("/Table");
           window.location.reload();
           return;
         }
-    
+
         // Handle successful response
         this.invoiceNumber = response.message.name;
         this.grandTotal = response.message.grand_total;
-        this.notification.createNotification("Order Update");
+        this.notification.createNotification("Pedido Atualizado");
         this.table.fetchTable();
         
         let items = this.menu.items;
@@ -352,7 +352,7 @@ export const useInvoiceDataStore = defineStore("invoiceData", {
         if (error._server_messages) {
           const messages = JSON.parse(error._server_messages);
           const message = JSON.parse(messages[0]);
-          await this.alert.createAlert("Message", message.message, "OK");
+          await this.alert.createAlert("Mensagem", message.message, "OK");
         }
       }
     },
@@ -414,8 +414,8 @@ export const useInvoiceDataStore = defineStore("invoiceData", {
             this.auth.sessionUser !== result.message.waiter
           ) {
             this.alert.createAlert(
-              "Message",
-              "Printing is Blocked Table is assigned to " +
+              "Mensagem",
+              "Impressão bloqueada. Mesa atribuída a " +
               result.message.waiter,
               "OK"
             );
@@ -442,7 +442,7 @@ export const useInvoiceDataStore = defineStore("invoiceData", {
         .then((result) => {
           if (result.message === "Success") {
             this.kotPrinting=false;
-            this.notification.createNotification("KOT Reprint Successful");
+            this.notification.createNotification("KOT Reimpresso com Sucesso");
           }
         })
         .catch((error) =>{
@@ -451,7 +451,7 @@ export const useInvoiceDataStore = defineStore("invoiceData", {
           if (error._server_messages) {
             const messages = JSON.parse(error._server_messages);
             const message = JSON.parse(messages[0]);
-             this.alert.createAlert("Message", message.message, "OK");
+             this.alert.createAlert("Mensagem", message.message, "OK");
           }
         } );
 
@@ -469,7 +469,7 @@ export const useInvoiceDataStore = defineStore("invoiceData", {
             doc: "POS Invoice",
             name: invoiceNo,
             print_format: this.print_format,
-            _lang: "en",
+            _lang: "pt-BR",
           };
           const result = await this.call.get(
             "frappe.www.printview.get_html_and_style",
@@ -478,8 +478,8 @@ export const useInvoiceDataStore = defineStore("invoiceData", {
           if (!result?.message?.html) {
             this.isPrinting = false;
             this.alert.createAlert(
-              "Message",
-              "Error while getting the HTML document to print for QZ",
+              "Mensagem",
+              "Erro ao gerar o documento HTML para impressão no QZ",
               "OK"
             );
             return;
@@ -492,7 +492,7 @@ export const useInvoiceDataStore = defineStore("invoiceData", {
             this.isPrinting = false
             if (!updateSuccess) {
               this.notification.createNotification(
-                "Print successful but failed to update status"
+                "Impresso com sucesso, mas falhou ao atualizar o status"
               );
             }
           }
@@ -516,7 +516,7 @@ export const useInvoiceDataStore = defineStore("invoiceData", {
             do {
               const res = await printingCall();
               if (res === "Success") {
-                this.notification.createNotification("Print Successful");
+                this.notification.createNotification("Impresso com Sucesso");
                 const sendObj = {
                   invoice: invoiceNo,
                 };
@@ -532,8 +532,8 @@ export const useInvoiceDataStore = defineStore("invoiceData", {
             } while (i < 1);
             throw {
               alert: this.alert.createAlert(
-                "Message",
-                `Message:${errorMessage}`,
+                "Mensagem",
+                `Mensagem:${errorMessage}`,
                 "OK"
               ),
               custom: (this.isPrinting = false),
@@ -555,7 +555,7 @@ export const useInvoiceDataStore = defineStore("invoiceData", {
             do {
               const res = await networkPrintPrintingCall();
               if (res === "Success") {
-                this.notification.createNotification("Print Successful");
+                this.notification.createNotification("Impresso com Sucesso");
                 const sendObj = {
                   invoice: invoiceNo,
                 };
@@ -571,8 +571,8 @@ export const useInvoiceDataStore = defineStore("invoiceData", {
             } while (i < 1);
             throw {
               alert: this.alert.createAlert(
-                "Message",
-                `Message:${errorMessage}`,
+                "Mensagem",
+                `Mensagem:${errorMessage}`,
                 "OK"
               ),
               custom: (this.isPrinting = false),
@@ -580,7 +580,7 @@ export const useInvoiceDataStore = defineStore("invoiceData", {
           }
         } else {
           // Socket printing using printview redirection
-          const url = `/printview?doctype=POS Invoice&name=${invoiceNo}&format=${this.print_format}&no_letterhead=1&settings={}&letterhead=No Letterhead&trigger_print=1&_lang=en`;
+          const url = `/printview?doctype=POS Invoice&name=${invoiceNo}&format=${this.print_format}&no_letterhead=1&settings={}&letterhead=No Letterhead&trigger_print=1&_lang=pt-BR`;
           window.open(url, "_blank", "noopener,noreferrer");
           try {
             await this.call.post("ury.ury.api.ury_print.qz_print_update", {
@@ -589,14 +589,14 @@ export const useInvoiceDataStore = defineStore("invoiceData", {
           } catch (err) {
             console.error("Failed to update print status for socket print", err);
           }
-          this.notification.createNotification("Print triggered");
+          this.notification.createNotification("Impressão iniciada");
           this.isPrinting = false;
         }
       } catch (e) {
         if (e?.custom) {
           this.isPrinting = false;
 
-          return this.alert.createAlert("Error", e?.title, "OK");
+          return this.alert.createAlert("Erro", e?.title, "OK");
         }
       }
     },
@@ -614,7 +614,7 @@ export const useInvoiceDataStore = defineStore("invoiceData", {
             updatePrintTable
           );
           if (response.message.status === "Success") {
-            this.notification.createNotification("Print and Update Successful");
+            this.notification.createNotification("Impresso e Atualizado com Sucesso");
             window.location.reload();
             return true;
           } else {
@@ -640,8 +640,8 @@ export const useInvoiceDataStore = defineStore("invoiceData", {
       }
 
       this.alert.createAlert(
-        "Error",
-        "Failed to update print status after multiple attempts",
+        "Erro",
+        "Falha ao atualizar o status de impressão após várias tentativas",
         "OK"
       );
       return false;
@@ -652,9 +652,9 @@ export const useInvoiceDataStore = defineStore("invoiceData", {
         const res = await loadQzPrinter(url, qz_host);
         print(qz_host);
         if (res === "success")
-          this.notification.createNotification("Printer loaded");
+          this.notification.createNotification("Impressora Carregada");
       } catch (err) {
-        this.alert.createAlert("Message", err.message, "OK");
+        this.alert.createAlert("Mensagem", err.message, "OK");
       }
     },
 
@@ -667,8 +667,8 @@ export const useInvoiceDataStore = defineStore("invoiceData", {
             this.cancelReason = "";
           } else {
             this.alert.createAlert(
-              "Message",
-              "You don't Have Permission to Cancel ",
+              "Mensagem",
+              "Você não tem permissão para cancelar",
               "OK"
             );
             this.cancelInvoiceFlag = false;
@@ -693,7 +693,7 @@ export const useInvoiceDataStore = defineStore("invoiceData", {
       this.call
         .post("ury.ury.doctype.ury_order.ury_order.cancel_order", updatedFields)
         .then(() => {
-          this.notification.createNotification("Invoice Cancelled");
+          this.notification.createNotification("Fatura Cancelada");
           router.push("/Table").then(() => {
             window.location.reload();
           });

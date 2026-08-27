@@ -61,7 +61,7 @@ export const posOpening = defineStore("posOpen", {
           if (error._server_messages) {
             const messages = JSON.parse(error._server_messages);
             const message = JSON.parse(messages[0]);
-            this.alert.createAlert("Message", message.message, "OK");
+            this.alert.createAlert("Mensagem", message.message, "OK");
           }
         });
     },
@@ -74,9 +74,9 @@ export const posOpening = defineStore("posOpen", {
     },
     getBadgeText() {
       if (this.isPosOpen == "Draft") {
-        return "Draft";
+        return "Rascunho";
       } else if (this.isPosOpen == "Open") {
-        return "Open";
+        return "Aberto";
       }
     },
 
