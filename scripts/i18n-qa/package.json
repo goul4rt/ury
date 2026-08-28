@@ -1,0 +1,13 @@
+{
+  "name": "i18n-qa",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Headless-browser QA tool: walks /app pages, captures rendered text, and cross-references it against Frappe's untranslated-string catalogs to find core ERPNext/Frappe strings that are both untranslated and actually visible.",
+  "type": "module",
+  "scripts": {
+    "capture": "node capture.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.47.0"
+  }
+}

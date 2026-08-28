@@ -1,0 +1,885 @@
+% of selected sales,% das vendas selecionadas,
+"<div class=""container px-0"">
+<div class=""row"" id=""fav_items""></div>
+</div>","<div class=""container px-0"">
+<div class=""row"" id=""fav_items""></div>
+</div>",
+"<div class=""container px-0"">
+<div class=""row"" id=""restaurant_menu_items""></div>
+</div>","<div class=""container px-0"">
+<div class=""row"" id=""restaurant_menu_items""></div>
+</div>",
+"<div class=""container px-0"">
+<div id=""restaurantCartItems""></div>
+</div>","<div class=""container px-0"">
+<div id=""restaurantCartItems""></div>
+</div>",
+"<li>Daily Gross Salary Cost is calculated from employees attendance.</li>
+<br>","<li>O Custo Bruto Diário de Salários é calculado com base na frequência dos funcionários.</li>
+<br>",
+AC,Climatizado,
+AMOUNT,VALOR,
+About,Sobre,
+Active Info,Informações Ativas,
+Add Discount,Adicionar Desconto,
+Add Item,Adicionar Item,
+Additional Details,Detalhes Adicionais,
+Address,Endereço,
+Aggregator ID,ID do Aplicativo,
+Aggregator Series Prefix,Prefixo de Série do Aplicativo,
+Aggregator Settings,Configurações do Aplicativo,
+Aggregators,Aplicativos,
+Aggregators Settings,Configurações de Aplicativos,
+All,Todos,
+Allow Cashier To Edit And Remove Table Order Items,Permitir que o Caixa Edite e Remova Itens do Pedido da Mesa,
+Allow Cashier To View All Status,Permitir que o Caixa Veja Todos os Status,
+Amended From,Alterado De,
+Amount,Montante,
+An error occurred while printing,Ocorreu um erro ao imprimir,
+Applied for both Sales Invoice and POS Invoice,Aplicado tanto para Fatura de Venda quanto para Fatura do PDV,
+Apps,Aplicativos,
+Arrived Time,Horário de Chegada,
+At least one item must remain on the original bill.,Pelo menos um item deve permanecer na conta original.,
+Bill,Fatura,
+Bill Merge Details,Detalhes da Junção de Contas,
+Block Takeaway KOT,Bloquear KOT de Para Viagem,
+Branch,Filial,
+Breakup,Detalhamento,
+Burning Materials (Other Consumables),Materiais Consumíveis (Outros Consumíveis),
+Buying Price,Preço de Compra,
+Buying Price List,Lista de Preços de Compra,
+Cancel,Cancelar,
+Cancel Order,Cancelar Pedido,
+Cancellation Reason,Motivo do Cancelamento,
+Cancelled,Cancelado,
+Cancelled Qty,Qtd. Cancelada,
+Cannot merge an already merged table.,Não é possível juntar uma mesa que já está juntada.,
+Cannot merge tables from different rooms.,Não é possível juntar mesas de salões diferentes.,
+Cannot merge tables with separate active orders.,Não é possível juntar mesas com pedidos ativos separados.,
+Cannot move more than available quantity for {0}.,Não é possível mover mais que a quantidade disponível de {0}.,
+Cannot unmerge active tables.,Não é possível separar mesas ativas.,
+Captain Transfer,Troca de Garçom,
+Captain transfer is not allowed between different rooms,A troca de garçom não é permitida entre salões diferentes,
+Cart Items,Itens do Carrinho,
+Cashier,Caixa,
+Checkout,Finalizar Compra,
+Circle,Círculo,
+Click Enter To Add,Clique em Enter para Adicionar,
+Closing Amount,Valor de Fechamento,
+Comment,Comentário,
+Comments,Comentários,
+Company,Empresa,
+Confirm Cancellation,Confirmar Cancelamento,
+Cost Of Goods,Custo das Mercadorias,
+Cost Of Goods Sold (Breakup),Custo das Mercadorias Vendidas (Detalhamento),
+Cost Per Unit,Custo por Unidade,
+Cost center is mandatory.,O centro de custo é obrigatório.,
+Cost of Goods Sold,Custo Dos Produtos Vendidos,
+Cost of Goods Sold Percent,Percentual do Custo das Mercadorias Vendidas,
+Course,Etapa,
+Course Icon,Ícone da Etapa,
+Create Invoice without Tax,Criar Fatura sem Imposto,
+Current Order,Ordem Atual,
+Customer,Cliente,
+Customer Group,Grupo de Clientes,
+Customer Name,Nome do Cliente,
+Customer Territory,Território do Cliente,
+Customer group,Grupo de clientes,
+Daily Fixed,Fixo Diário,
+Daily P and L Settings,Configurações de P&L Diário,
+Date,Data,
+Default Menu,Cardápio Padrão,
+Default Mode Of Payments,Formas de Pagamento Padrão,
+Default Price List,Lista de Preços Padrão,
+Default Room,Salão Padrão,
+Default Tax Template,Modelo de Imposto Padrão,
+Delivery,Entrega,
+Depreciation,Depreciação,
+Depreciation Percent,Percentual de Depreciação,
+Details,Detalhes,
+Difference,Diferença,
+Dine In,No Local,
+Direct Expenses,Despesas Diretas,
+Direct Fixed Expenses,Despesas Fixas Diretas,
+Disabled,Desativado,
+Discount is not allowed for this POS Profile,Desconto não é permitido para este Perfil de PDV,
+Discount of {0}% exceeds the maximum allowed discount of {1}%.,O desconto de {0}% excede o desconto máximo permitido de {1}%.,
+Discount percentage must be between 0 and 100,O percentual de desconto deve estar entre 0 e 100,
+Discounts & Round Offs,Descontos e Arredondamentos,
+Discounts & Round Offs Percent,Percentual de Descontos e Arredondamentos,
+Discounts are not enabled for POS Profile {0}.,Descontos não estão habilitados para o Perfil de PDV {0}.,
+Documentation,Documentação,
+Draft,Rascunho,
+Duplicate,Duplicar,
+Edit Cart,Editar Carrinho,
+Either Bill is not enabled / Printer is not selected in Printer Settings.,A Conta não está habilitada ou a Impressora não foi selecionada nas Configurações de Impressora.,
+Electricity Closing,Fechamento de Energia Elétrica,
+Electricity Opening,Abertura de Energia Elétrica,
+Electricty Charges,Custos de Energia Elétrica,
+Employee Cost,Custo com Funcionários,
+Employee Cost Percent,Percentual de Custo com Funcionários,
+Employee Costs,Custos com Funcionários,
+Enable Discount,Ativar Desconto,
+Enable KOT Audio Alert,Ativar Alerta Sonoro de KOT,
+Enable KOT Reprint,Ativar Reimpressão de KOT,
+Enable Multiple Cashier,Ativar Múltiplos Caixas,
+Enable discount feature in URY POS,Ativar recurso de desconto no URY POS,
+Enable order type wise display on mosaic,Ativar exibição por tipo de pedido no mosaic,
+Enabled,Ativado,
+"Enables Cashiers to view all statuses (Paid, Consolidated, Return Invoices) in the recent order.","Permite que os Caixas vejam todos os status (Pago, Consolidado, Faturas de Devolução) nos pedidos recentes.",
+Enter Units Consumed,Informe as Unidades Consumidas,
+Error while printing order,Erro ao imprimir o pedido,
+Expected Amount,Quantidade Esperada,
+Expense,Despesa,
+Extended Hours,Horário Estendido,
+Failed,Falhou,
+Failed to load data . Please refresh the page,Falha ao carregar os dados. Atualize a página,
+Favorite Item,Item Favorito,
+Favorite Items,Itens Favoritos,
+Frappe School,Frappe School,
+Frappe Support,Suporte Frappe,
+Grand Total,Total Geral,
+Gross Profit/Loss,Lucro/Prejuízo Bruto,
+Gross Profit/Loss Percent,Percentual de Lucro/Prejuízo Bruto,
+Gross Sales,Vendas Brutas,
+Gross Sales Percent,Percentual de Vendas Brutas,
+Image,Imagem,
+Includes in Total Indirect Expense,Incluir no Total de Despesas Indiretas,
+Indicate Course,Indicar Etapa,
+Indicate In KDS,Indicar no KDS,
+Indirect Expenses,Despesas Indiretas,
+Indirect Fixed Expenses,Despesas Fixas Indiretas,
+Invalid QZ private key path in site config,Caminho da chave privada do QZ inválido na configuração do site,
+Invalid characters in search term,Caracteres inválidos no termo de busca,
+Invalid discount value: {0},Valor de desconto inválido: {0},
+Invoice,Fatura,
+Invoice Already Billed,Fatura Já Faturada,
+Invoice Created,Fatura Criada,
+Invoice Creation Time,Horário de Criação da Fatura,
+Invoice Printed,Fatura Impressa,
+Invoice Series Prefix,Prefixo da Série de Fatura,
+Is Aggregator,É Aplicativo,
+Is Take Away,É Para Viagem,
+Item,Item,
+Item Add On,Adicional do Item,
+Item Added Total Qty= 1,Qtd. Total Adicionada do Item= 1,
+Item Cart,Item do Carrinho,
+Item Code,Código do Item,
+Item Group,Grupo de Itens,
+Item Groups,Grupos de Itens,
+Item Name,Nome do Item,
+Items,Itens,
+KDS Order Type,Tipo de Pedido no KDS,
+KDS Settings,Configurações do KDS,
+KOT,KOT,
+KOT Items,Itens do KOT,
+KOT Print,Impressão do KOT,
+KOT Print Format,Formato de Impressão do KOT,
+KOT Settings,Configurações do KOT,
+KOT Warning Time,Tempo de Alerta do KOT,
+KOT alert sound,Som de alerta do KOT,
+Keep Sales Invoice Unpaid,Manter Fatura de Venda Em Aberto,
+Keyboard Shortcuts,Atalhos do teclado,
+Latest Invoice Time,Horário da Última Fatura,
+Layout Height,Altura da Planta,
+Layout Position,Posição na Planta,
+Layout Width,Largura da Planta,
+Layout X,Planta X,
+Layout Y,Planta Y,
+Linked Invoices,Faturas Vinculadas,
+Loading Invoices! Please Wait...,Carregando Faturas! Aguarde...,
+Log out,Sair,
+Main Cashier,Caixa Principal,
+Material,Material,
+Materials Consumed,Materiais Consumidos,
+Menu,Menu,
+Menu For Room,Cardápio do Salão,
+Menu Info,Informações do Cardápio,
+Menu for Room,Cardápio do salão,
+Merged POS Invoice,Fatura do PDV Juntada,
+Merged POS Invoice Details,Detalhes da Fatura do PDV Juntada,
+Merged Tables,Mesas Juntadas,
+Merged Total,Total Juntado,
+Merged With,Juntada Com,
+Minimum Seating,Assentos Mínimos,
+Missing URY Report Settings,Configurações de Relatório do URY Ausentes,
+Missing payload to sign,Payload ausente para assinatura,
+Mobile Number,Número de Celular,
+Mode of Payment,Forma de Pagamento,
+Modified time,Horário de modificação,
+Monthly Fixed,Fixo Mensal,
+Monthly Fixed Expenses,Despesas Fixas Mensais,
+Multiple Cashier Configuration,Configuração de Múltiplos Caixas,
+Multiple Rooms,Múltiplos Salões,
+My Profile,Meu Perfil,
+My Settings,Minhas Configurações,
+NON-AC,Não Climatizado,
+Net Profit/Loss,Lucro / Perda Líquida,
+Net Profit/Loss Percent,Percentual de Lucro/Prejuízo Líquido,
+Net Sales,Vendas Líquidas,
+Net Sales Percent,Percentual de Vendas Líquidas,
+Net Total,Total Líquido,
+New Order,Novo Pedido,
+No Of Hours,Número de Horas,
+No item price found for Item: {0} in Price List: {1}. Please check the price list settings.,Nenhum preço encontrado para o Item: {0} na Lista de Preços: {1}. Verifique as configurações da lista de preços.,
+No of Seats,Número de Assentos,
+Not allowed to cancel billed orders.,Não é permitido cancelar pedidos já faturados.,
+Not allowed to cancel table orders through PoS,Não é permitido cancelar pedidos de mesa pelo PDV,
+Not permitted,Não Permitido,
+Not permitted to access this Customer,Sem permissão para acessar este Cliente,
+Not permitted to apply discounts,Sem permissão para aplicar descontos,
+Not permitted to execute KOT for this invoice,Sem permissão para executar o KOT desta fatura,
+Not permitted to modify this order,Sem permissão para modificar este pedido,
+Not permitted to print this document,Sem permissão para imprimir este documento,
+Not permitted to print this invoice,Sem permissão para imprimir esta fatura,
+Not permitted to release tables for this invoice,Sem permissão para liberar mesas desta fatura,
+Not permitted to send notifications for this KOT,Sem permissão para enviar notificações deste KOT,
+Not permitted to serve this KOT,Sem permissão para servir este KOT,
+Not permitted to split invoices from another branch.,Sem permissão para dividir faturas de outra filial.,
+Not permitted to split this invoice.,Sem permissão para dividir esta fatura.,
+Not permitted to view orders outside your active branch,Sem permissão para ver pedidos fora da sua filial ativa,
+Not permitted to view this order,Sem permissão para ver este pedido,
+Notify KOT Delay,Notificar Atraso do KOT,
+Occupied,Ocupado,
+Occupied tables cannot be merged.,Mesas ocupadas não podem ser juntadas.,
+Only draft invoices can be split.,Somente faturas em rascunho podem ser divididas.,
+Opening Amount,Quantidade de Abertura,
+Order,Pedido,
+Order Completed,Pedido Concluído,
+Order Info,Informações do Pedido,
+Order Modified,Pedido Modificado,
+Order No,Nº do Pedido,
+Order Status,Status do Pedido,
+Order Type,Tipo de Pedido,
+Order Type Menu,Cardápio por Tipo de Pedido,
+Order Type Wise Menu,Cardápio por Tipo de Pedido,
+Order Updated,Pedido Atualizado,
+Original KOT,KOT Original,
+Other Expenses,Outras Despesas,
+Other Expenses Percent,Percentual de Outras Despesas,
+PERCENTAGE,PERCENTUAL,
+POS Invoice,Fatura PDV,
+POS Item Variants,Variações de Item do PDV,
+POS Opening Entry,Entrada de abertura de PDV,
+ Enable Order Type Edit,Ativar Edição do Tipo de Pedido,
+Item Added Total Qty= ,Qtd. Total Adicionada do Item= ,
+Item Quantity Reduced Total Qty= ,Qtd. Total Reduzida do Item= ,
+POS Profile ,Perfil de PDV ,
+URY pos restrictions ,Restrições do URY POS ,
+POS Profile Failed to Load,Falha ao Carregar o Perfil de PDV,
+POS Profile Not Found or User permission in POS Profile is not given to this user,Perfil de PDV não encontrado ou o usuário não tem permissão no Perfil de PDV,
+POS Profile {0} not found.,Perfil de PDV {0} não encontrado.,
+POS Transactions,Transações PDV,
+POST requests only,Somente requisições POST,
+Parcel Order Printer,Impressora de Pedido para Viagem,
+Partially cancelled,Parcialmente cancelado,
+Past Order Fetched,Pedido Anterior Carregado,
+Pax,Pax,
+Payment Amount,Valor do Pagamento,
+Payment Reconciliation,Conciliação de Pagamento,
+Payment Type,Tipo de Pagamento,
+Per Unit,Por Unidade,
+Percent,Por cento,
+Percentage Expenses,Despesas Percentuais,
+Percentage Type,Tipo de Percentual,
+Period Details,Detalhes do Período,
+Period End Date,Data de Término do Período,
+Period Start Date,Data de Início do Período,
+Phone In,Por Telefone,
+Please select a table,Selecione uma tabela,
+Please set an active menu for Restaurant {0},Defina um menu ativo para o Restaurante {0},
+Please set up URY Report Settings for the selected branch: <strong>{0}</strong>,Configure as Configurações de Relatório do URY para a filial selecionada: <strong>{0}</strong>,
+Point of Sale,Ponto de Vendas,
+Posting Date,Data da Postagem,
+Posting Time,Horário da Postagem,
+Price List (Auto created),Lista de preços (criada automaticamente),
+Print,Impressão,
+Printer,Impressora,
+Printer Info,Informações da Impressora,
+Printer Settings,Configurações da Impressora,
+Printer info,Informações da impressora,
+Printers,Impressoras,
+Printing Failed,Falha na Impressão,
+Printing Failed: Error connecting to QZ Tray,Falha na Impressão: Erro ao conectar ao QZ Tray,
+Printing Failed: Error looking up printer,Falha na Impressão: Erro ao procurar a impressora,
+Printing Failed: Error printing with QZ Tray,Falha na Impressão: Erro ao imprimir com o QZ Tray,
+Printing Invoice,Imprimindo Fatura,
+Priority,Prioridade,
+Processing Sales! Please Wait...,Processando Vendas! Aguarde...,
+Production,Produção,
+Profit / Loss,Lucro / Prejuízo,
+QZ Host,Host do QZ,
+QZ Print,Impressão QZ,
+QZ private key is not configured in site config,A chave privada do QZ não está configurada na configuração do site,
+Qty,Qtd,
+Quantity,Quantidade,
+Queued,Em Fila,
+REVENUE,RECEITA,
+Rate,Taxa,
+Reason,Motivo,
+Receiver By Role,Receptor por função,
+Recipients,Destinatários,
+Rectangle,Retângulo,
+Reload,Recarregar,
+Remarks,Observações,
+Report an Issue,Reportar um Problema,
+Reprint KOT Format,Formato de Reimpressão do KOT,
+Require Daily POS Closing,Exigir Fechamento Diário do PDV,
+Reset Order Number Daily,Reiniciar Numeração de Pedido Diariamente,
+Restaurant,Restaurante,
+Restaurant Info,Informações do Restaurante,
+Restaurant Menu,Menu do Restaurante,
+Restaurant Prefix For Sales Invoice,Prefixo do Restaurante para Fatura de Venda,
+Restaurant Room,Salão do Restaurante,
+Restaurant Table,Mesa de Restaurante,
+Retry,Repetir,
+Role,Função,
+Role Allowed For Billing,Perfil Permitido para Faturamento,
+Role Permitted,Perfil Permitido,
+Role Permitted For Captain Transfer,Perfil Permitido para Troca de Garçom,
+Role Restricted For Table Order,Perfil Restrito para Pedido de Mesa,
+Room,Quarto,
+Room Type,Tipo de Quarto,
+Room Wise Menu,Cardápio por Salão,
+Rooms,Salões,
+Search term too long (max 100 characters),Termo de busca muito longo (máx. 100 caracteres),
+Select Customer / No of Pax,Selecione o Cliente / Nº de Pax,
+Select Items,Selecione Itens,
+Select Table,Selecione a Mesa,
+Select at least one item to move.,Selecione pelo menos um item para mover.,
+Select at least one table to merge.,Selecione pelo menos uma mesa para juntar.,
+Serve Priority,Prioridade de Serviço,
+Served Time,Horário de Serviço,
+Serving Priority,Prioridade de Atendimento,
+Session Defaults,Padrões de Sessão,
+Set a limit for the cashier to view a restricted number of recently paid invoices.,Defina um limite para o caixa visualizar um número restrito de faturas pagas recentemente.,
+Setting table,Configurando mesa,
+Show Item Image In URY Pos,Exibir Imagem do Item no URY POS,
+Show Limited Paid Invoices,Exibir Faturas Pagas Limitadas,
+Special Dish,Prato Especial,
+Square,Quadrado,
+Start Time For Preparation,Horário de Início do Preparo,
+Status,Status,
+Sub POS Close Entry,Lançamento de Fechamento do Sub PDV,
+Sub POS Closing,Fechamento do Sub PDV,
+Sub POS Closing Failed,Falha no Fechamento do Sub PDV,
+Sub POS Closing Payment,Pagamento de Fechamento do Sub PDV,
+Sub POS Closing failed while running in a background process. You can resolve the {0} and retry the process again.,O Fechamento do Sub PDV falhou ao rodar em um processo em segundo plano. Você pode resolver o {0} e tentar novamente.,
+Sub POS Invoices,Faturas do Sub PDV,
+Submitted,Enviado,
+Summary,Resumo,
+System Manager,Administrador do Sistema,
+Table,Tabela,
+Table Assignment Error,Erro na Atribuição da Mesa,
+Table Attention time,Tempo de Atenção da Mesa,
+Table Info,Informações da Mesa,
+Table List,Lista de Mesas,
+Table Order Printer,Impressora de Pedido de Mesa,
+Table Shape,Formato da Mesa,
+Table Takeaway,Mesa Para Viagem,
+Table Transfer,Transferência de Mesa,
+Table is not merged.,A mesa não está juntada.,
+Table not found.,Mesa não encontrada.,
+Table transfer between different branches is restricted.,A transferência de mesa entre filiais diferentes é restrita.,
+Table transfer is not allowed for merged tables. Unmerge first.,Não é permitida a transferência de mesas juntadas. Separe-as primeiro.,
+Take Away,Para Viagem,
+Take Away List,Lista de Para Viagem,
+Tax,Imposto,
+Tax Percent,Percentual de Imposto,
+This method is only meant for developer mode,Este método é destinado apenas ao modo de desenvolvedor,
+This order has already been billed. Please reload the page.,Este pedido já foi faturado. Atualize a página.,
+"This role grants permissions for Captain Transfer with access to all tables
+","Este perfil concede permissões para Troca de Garçom com acesso a todas as mesas
+",
+This table is assigned to {0}. Please contact them for assistance.,Esta mesa está atribuída a {0}. Entre em contato para obter ajuda.,
+Time,Tempo,
+Toggle Full Width,Alternar Largura Total,
+Toggle Recent Orders,Alternar Pedidos Recentes,
+Toggle Theme,Alternar Tema,
+Total Direct Expense,Total de Despesas Diretas,
+Total Direct Expense Percent,Percentual do Total de Despesas Diretas,
+Total Indirect Expenses,Total de Despesas Indiretas,
+Total Indirect Expenses Percent,Percentual do Total de Despesas Indiretas,
+Total Items,Total de Itens,
+Total Production Time,Tempo Total de Produção,
+Total Quantity,Quantidade Total,
+Total Spend Time,Tempo Total Gasto,
+Type,Tipo,
+URY,URY,
+URY Captain,Capitão URY,
+URY Cashier,Caixa URY,
+URY Cost Of Goods,Custo das Mercadorias URY,
+URY Daily P and L,P&L Diário URY,
+URY Fixed Expenses,Despesas Fixas URY,
+URY KOT,KOT URY,
+URY KOT Error Log,Log de Erros do KOT URY,
+URY KOT Items,Itens do KOT URY,
+URY KOT Naming Series,Série de Numeração do KOT URY,
+URY Last Aggregator Invoice,Última Fatura de Aplicativo URY,
+URY Last Invoice,Última Fatura URY,
+URY Manager,Gerente URY,
+URY Materials,Materiais URY,
+URY Menu,Cardápio URY,
+URY Menu Course,Etapa do Cardápio URY,
+URY Menu Item,Item do Cardápio URY,
+URY Merged POS Invoice Detail,Detalhe de Fatura do PDV Juntada URY,
+URY Notification Recipient,Destinatário de Notificação URY,
+URY Order,Pedido URY,
+URY Order Item,Item do Pedido URY,
+URY Order Number,Número do Pedido URY,
+URY P and L Breakup,Detalhamento do P&L URY,
+URY P and L Materials,Materiais do P&L URY,
+URY Printer Settings,Configurações de Impressora URY,
+URY Production Item Groups,Grupos de Itens de Produção URY,
+URY Production Unit,Unidade de Produção URY,
+URY Report Settings,Configurações de Relatório URY,
+URY Restaurant,Restaurante URY,
+URY Room,Salão URY,
+URY Table,Mesa URY,
+URY User,Usuário URY,
+URY Variable Expenses,Despesas Variáveis URY,
+Units Consumed,Unidades Consumidas,
+Update,Atualizar,
+User,Usuário,
+User Details,Detalhes do Usuario,
+User Forum,Fórum de Usuários,
+"Users assigned this role will function as cashiers in URY POS, responsible for managing billing transactions.","Usuários com este perfil atuarão como caixas no URY POS, responsáveis por gerenciar as transações de faturamento.",
+Users with this role have restricted access to table order functions.,Usuários com este perfil têm acesso restrito às funções de pedido de mesa.,
+Validate that the previous day’s POS is closed before opening a new one.,Valida se o PDV do dia anterior está fechado antes de abrir um novo.,
+Validation Error,Erro de Validação,
+Verified,Verificado,
+View Website,Visualizar website,
+Waiter,Garçom,
+Waiter Print,Impressão do Garçom,
+Waiter Print Format,Formato de Impressão do Garçom,
+Warehouse,Armazém,
+Warning,Aviso,
+Websocket Print,Impressão via Websocket,
+Whether the branch is open after 12 AM.,Se a filial funciona após meia-noite.,
+You are not allowed to cancel an invoice from another branch.,Você não tem permissão para cancelar uma fatura de outra filial.,
+You do not have permission to access invoices for POS Profile {0}.,Você não tem permissão para acessar faturas do Perfil de PDV {0}.,
+You do not have permission to apply a discount on this order.,Você não tem permissão para aplicar um desconto neste pedido.,
+You do not have permission to cancel this invoice.,Você não tem permissão para cancelar esta fatura.,
+You must save document as draft to cancel.,Você deve salvar o documento como rascunho para cancelar.,
+closing reading(Unit),leitura de fechamento(Unidade),
+naming_series,série de numeração,
+opening reading(Unit),leitura de abertura(Unidade),
+user,usuário,
+verified_by,verificado por,
+Let's Set Up the Stock Module.,Vamos configurar o módulo de Estoque.,
+"Inventory, Warehouses, Analysis, and more.","Inventário, Armazéns, Análises e muito mais.",
+The Stock Module is all set up!,O módulo de Estoque está totalmente configurado!,
+Review Stock Settings,Revisar Configurações de Estoque,
+"# Review Stock Settings
+
+In ERPNext, the Stock module’s features are configurable as per your business needs. Stock Settings is the place where you can set your preferences for:
+- Default values for Item and Pricing
+- Default valuation method for inventory valuation
+- Set preference for serialization and batching of item
+- Set tolerance for over-receipt and delivery of items","# Revisar Configurações de Estoque
+
+No ERPNext, os recursos do módulo de Estoque são configuráveis de acordo com as necessidades do seu negócio. Configurações de Estoque é o lugar onde você define suas preferências para:
+- Valores padrão para Item e Precificação
+- Método padrão de avaliação para valorização de inventário
+- Definir preferência de serialização e lotes de item
+- Definir tolerância para excesso de recebimento e entrega de itens",
+Take a walk through Stock Settings,Faça um tour pelas Configurações de Estoque,
+Setup a Warehouse,Configurar um Armazém,
+"# Setup a Warehouse
+The warehouse can be your location/godown/store where you maintain the item's inventory, and receive/deliver them to various parties.
+
+In ERPNext, you can maintain a Warehouse in the tree structure, so that location and sub-location of an item can be tracked. Also, you can link a Warehouse to a specific Accounting ledger, where the real-time stock value of that warehouse’s item will be reflected.","# Configurar um Armazém
+O armazém pode ser o seu local/depósito/loja onde você mantém o inventário do item, e recebe/entrega itens para diversas partes.
+
+No ERPNext, você pode manter um Armazém em estrutura de árvore, para que o local e sublocal de um item possam ser rastreados. Além disso, você pode vincular um Armazém a um livro contábil específico, onde o valor de estoque em tempo real dos itens desse armazém será refletido.",
+Let’s create your first  warehouse ,Vamos criar seu primeiro armazém,
+Manage Stock Movements,Gerenciar Movimentações de Estoque,
+"# Manage Stock Movements
+Stock entry allows you to register the movement of stock for various purposes like transfer, received, issues, repacked, etc. To address issues related to theft and pilferages,  you can always ensure that the movement of goods happens against a document reference Stock Entry in ERPNext.
+
+Let’s get a quick walk-through on the various scenarios covered in Stock Entry by watching [*this video*](https://www.youtube.com/watch?v=Njt107hlY3I).","# Gerenciar Movimentações de Estoque
+O Lançamento no Estoque permite registrar a movimentação de estoque para diversas finalidades, como transferência, recebimento, saída, reembalagem etc. Para lidar com problemas relacionados a furtos e perdas, você sempre pode garantir que a movimentação de mercadorias aconteça com referência a um documento Lançamento no Estoque no ERPNext.
+
+Vamos fazer um tour rápido pelos diversos cenários cobertos pelo Lançamento no Estoque assistindo [*este vídeo*](https://www.youtube.com/watch?v=Njt107hlY3I).",
+Create a Material Transfer Entry,Criar um Lançamento de Transferência de Material,
+Check Stock Ledger,Consultar Livro de Inventário,
+"# Check Stock Reports
+Based on the various stock transactions, you can get a host of one-click Stock Reports in ERPNext like Stock Ledger, Stock Balance, Projected Quantity, and Ageing analysis.","# Consultar Relatórios de Estoque
+Com base nas diversas transações de estoque, você tem acesso a diversos Relatórios de Estoque com um clique no ERPNext, como Livro de Inventário, Saldo de Estoque, Quantidade Projetada e análise de Envelhecimento.",
+Update Stock Opening Balance,Atualizar Saldo Inicial de Estoque,
+"# Update Stock Opening Balance
+It’s an entry to update the stock balance of an item, in a warehouse, on a date and time you are going live on ERPNext.
+
+Once opening stocks are updated, you can create transactions like manufacturing and stock deliveries, where this opening stock will be consumed.","# Atualizar Saldo Inicial de Estoque
+É um lançamento para atualizar o saldo de estoque de um item, em um armazém, em uma data e horário em que você está entrando em operação no ERPNext.
+
+Depois que os saldos iniciais forem atualizados, você pode criar transações como fabricação e entregas de estoque, nas quais esse saldo inicial será consumido.",
+Let’s create a stock opening entry,Vamos criar um lançamento de saldo inicial de estoque,
+Total Stock Value,Valor Total em Estoque,
+Total Warehouses,Total de Armazéns,
+Total Active Items,Total de Itens Ativos,
+Warehouse wise Stock Value,Valor de Estoque por Armazém,
+Learn Inventory Management,Aprenda Gestão de Estoque,
+"<span class=""h4""><b>Quick Access</b></span>","<span class=""h4""><b>Acesso Rápido</b></span>",
+"<span class=""h4""><b>Masters &amp; Reports</b></span>","<span class=""h4""><b>Cadastros e Relatórios</b></span>",
+"<span class=""h4""><b>Reports &amp; Masters</b></span>","<span class=""h4""><b>Relatórios e Cadastros</b></span>",
+"<span class=""h4""><b>Reports & Masters</b></span>","<span class=""h4""><b>Relatórios e Cadastros</b></span>",
+"<span class=""h4""><b>Shortcuts</b></span>","<span class=""h4""><b>Atalhos</b></span>",
+Total Outgoing Bills,Total de Contas a Pagar,
+Total Incoming Bills,Total de Contas a Receber,
+Total Incoming Payment,Total de Pagamentos Recebidos,
+Total Outgoing Payment,Total de Pagamentos Efetuados,
+Let's Set Up the Manufacturing Module.,Vamos configurar o módulo de Fabricação.,
+"Products, Raw Materials, BOM, Work Order, and more.","Produtos, Matérias-Primas, Lista de Materiais, Ordem de Trabalho e mais.",
+Manufacturing module is all set up!,O módulo de Fabricação está configurado!,
+Learn more about Production Planning,Saiba mais sobre Planejamento da Produção,
+"# How Production Planning Works
+
+Production Plan helps in production and material planning for the Items planned for manufacturing. These production items can be committed via Sales Order (to Customers) or Material Requests (internally).
+","# Como Funciona o Planejamento da Produção
+
+O Plano de Produção ajuda no planejamento de produção e materiais para os Itens planejados para fabricação. Esses itens de produção podem ser comprometidos via Pedido de Venda (para Clientes) ou Requisições de Material (internamente).
+",
+Create your first Work Order,Crie sua primeira Ordem de Trabalho,
+"# Create a Work Order
+
+A Work Order or a Job order is given to the manufacturing shop floor by the Production Manager to initiate the manufacturing of a certain quantity of an item. Work Order carriers details of production Item, its BOM, quantities to be manufactured, and operations.
+
+Through Work Order, you can track various production status like:
+
+- Issue of raw-material to shop material
+- Progress on each Workstation via Job Card
+- Manufactured Quantity against Work Order
+","# Criar uma Ordem de Trabalho
+
+Uma Ordem de Trabalho (ou ordem de serviço) é entregue ao chão de fábrica pelo Gerente de Produção para iniciar a fabricação de uma certa quantidade de um item. A Ordem de Trabalho contém os detalhes do Item de produção, sua Lista de Materiais, as quantidades a serem fabricadas e as operações.
+
+Através da Ordem de Trabalho, você pode acompanhar diversos status de produção, como:
+
+- Envio de matéria-prima para o chão de fábrica
+- Progresso em cada Estação de Trabalho via Cartão de Serviço
+- Quantidade fabricada em relação à Ordem de Trabalho
+",
+Create your first Bill of Materials,Crie sua primeira Lista de Materiais,
+"# Create a Bill of Materials
+
+A Bill of Materials (BOM) is a list of items and sub-assemblies with quantities required to manufacture an Item.
+
+BOM also provides cost estimation for the production of the item. It takes raw-materials cost based on valuation and operations to cost based on routing, which gives total costing for a BOM.","# Criar uma Lista de Materiais
+
+Uma Lista de Materiais (Bill of Materials, ou BOM) é uma lista de itens e submontagens com as quantidades necessárias para fabricar um Item.
+
+A Lista de Materiais também fornece uma estimativa de custo para a produção do item. Ela considera o custo das matérias-primas com base na avaliação e o custo das operações com base no roteiro, resultando no custo total da Lista de Materiais.",
+Finished Items,Itens Acabados,
+Create an Item,Criar um Item,
+"# Create Items for Bill of Materials
+
+One of the prerequisites of a BOM is the creation of raw materials, sub-assembly, and finished items. Once these items are created, you will be able to proceed to the Bill of Materials master, which is composed of items and routing.
+","# Criar Itens para a Lista de Materiais
+
+Um dos pré-requisitos de uma Lista de Materiais é a criação das matérias-primas, submontagens e itens acabados. Depois que esses itens forem criados, você poderá seguir para o cadastro da Lista de Materiais, composta por itens e roteiro.
+",
+Routing,Roteiro,
+"# Setup Routing
+
+A Routing stores all Operations along with the description, hourly rate, operation time, batch size, etc. Click below to learn how the Routing template can be created, for quick selection in the BOM.","# Configurar Roteiro
+
+Um Roteiro armazena todas as Operações junto com a descrição, valor por hora, tempo de operação, tamanho do lote etc. Clique abaixo para saber como criar um modelo de Roteiro, para seleção rápida na Lista de Materiais.",
+Check help to setup Routing,Veja a ajuda para configurar o Roteiro,
+"# Create Workstations
+
+A Workstation stores information regarding the place where the workstation operations are performed. As an example, if you have ten sewing machines doing stitching jobs, each machine will be added as a workstation.","# Criar Estações de Trabalho
+
+Uma Estação de Trabalho armazena informações sobre o local onde as operações são realizadas. Por exemplo, se você tem dez máquinas de costura fazendo trabalhos de costura, cada máquina será cadastrada como uma estação de trabalho.",
+Let’s create a Workstation,Vamos criar uma Estação de Trabalho,
+Operation,Operação,
+"# Create Operations
+
+An Operation refers to any manufacturing operation performed on the raw materials to process it further in the manufacturing path. As an example, if you are into garments manufacturing, you will create Operations like fabric cutting, stitching, and washing as some of the operations.","# Criar Operações
+
+Uma Operação se refere a qualquer operação de fabricação realizada sobre as matérias-primas para processá-las ao longo do caminho de fabricação. Por exemplo, se você fabrica roupas, você criará Operações como corte de tecido, costura e lavagem.",
+Let’s create an Operation,Vamos criar uma Operação,
+Manufacturing Settings,Configurações de Fabricação,
+"# Review Manufacturing Settings
+
+In ERPNext, the Manufacturing module’s features are configurable as per your business needs. Manufacturing Settings is the place where you can set your preferences for:
+
+- Capacity planning for allocating jobs to workstations
+- Raw-material consumption based on BOM or actual
+- Default values and over-production allowance
+","# Revisar Configurações de Fabricação
+
+No ERPNext, os recursos do módulo de Fabricação são configuráveis de acordo com as necessidades do seu negócio. Configurações de Fabricação é o lugar onde você define suas preferências para:
+
+- Planejamento de capacidade para alocação de trabalhos nas estações de trabalho
+- Consumo de matéria-prima baseado na Lista de Materiais ou real
+- Valores padrão e tolerância de superprodução
+",
+Take a walk-through of Manufacturing Settings,Faça um tour pelas Configurações de Fabricação,
+Let's Set Up the Assets Module.,Vamos configurar o módulo de Ativos.,
+"Assets, Depreciations, Repairs, and more.","Ativos, Depreciações, Reparos e mais.",
+The Assets Module is all set up!,O módulo de Ativos está configurado!,
+Create an Asset Item,Criar um Item de Ativo,
+"# Asset Item
+
+Asset items are created based on Asset Category. You can create one or multiple items against once Asset Category. The sales and purchase transaction for Asset is done via Asset Item. ","# Item de Ativo
+
+Itens de Ativo são criados com base na Categoria de Ativo. Você pode criar um ou vários itens para cada Categoria de Ativo. As transações de venda e compra de Ativos são feitas através do Item de Ativo. ",
+Let's create a new Asset item,Vamos criar um novo Item de Ativo,
+Define Asset Category,Definir Categoria de Ativo,
+"# Asset Category
+
+An Asset Category classifies different assets of a Company.
+
+You can create an Asset Category based on the type of assets. For example, all your desktops and laptops can be part of an Asset Category named ""Electronic Equipments"". Create a separate category for furniture. Also, you can update default properties for each category, like:
+ - Depreciation type and duration
+ - Fixed asset account
+ - Depreciation account
+","# Categoria de Ativo
+
+Uma Categoria de Ativo classifica os diferentes ativos de uma Empresa.
+
+Você pode criar uma Categoria de Ativo com base no tipo de ativo. Por exemplo, todos os seus desktops e notebooks podem fazer parte de uma Categoria de Ativo chamada ""Equipamentos Eletrônicos"". Crie uma categoria separada para móveis. Você também pode atualizar as propriedades padrão de cada categoria, como:
+ - Tipo e duração da depreciação
+ - Conta de ativo fixo
+ - Conta de depreciação
+",
+Let's review existing Asset Category,Vamos revisar as Categorias de Ativo existentes,
+Purchase an Asset,Comprar um Ativo,
+"# Purchase an Asset
+
+Assets purchases process if done following the standard Purchase cycle. If capital work in progress is enabled in Asset Category, Asset will be created as soon as Purchase Receipt is created for it. You can quickly create a Purchase Receipt for Asset and see its impact on books of accounts.","# Comprar um Ativo
+
+O processo de compra de Ativos segue o ciclo padrão de Compras. Se o trabalho em andamento de capital estiver habilitado na Categoria de Ativo, o Ativo será criado assim que o Recibo de Compra for gerado para ele. Você pode criar rapidamente um Recibo de Compra para o Ativo e ver seu impacto nos livros contábeis.",
+Let's create a Purchase Receipt,Vamos criar um Recibo de Compra,
+Review Fixed Asset Accounts,Revisar Contas de Ativo Fixo,
+"# Fixed Asset Accounts
+
+With the company, a host of fixed asset accounts are pre-configured. To ensure your asset transactions are leading to correct accounting entries, you can review and set up following asset accounts as per your business  requirements.
+ - Fixed asset accounts (Asset account)
+ - Accumulated depreciation
+ - Capital Work in progress (CWIP) account
+ - Asset Depreciation account (Expense account)","# Contas de Ativo Fixo
+
+Junto com a empresa, diversas contas de ativo fixo já vêm pré-configuradas. Para garantir que suas transações de ativos gerem os lançamentos contábeis corretos, você pode revisar e configurar as seguintes contas de ativo de acordo com as necessidades do seu negócio.
+ - Contas de ativo fixo (Conta de Ativo)
+ - Depreciação acumulada
+ - Conta de Trabalho em Andamento de Capital (CWIP)
+ - Conta de Depreciação de Ativo (Conta de Despesa)",
+Let's walk-through Chart of Accounts to review setup,Vamos percorrer o Plano de Contas para revisar a configuração,
+Add an Existing Asset,Adicionar um Ativo Existente,
+"# Add an Existing Asset
+
+If you are just starting with ERPNext, you will need to enter Assets you already possess. You can add them as existing fixed assets in ERPNext. Please note that you will have to make a Journal Entry separately updating the opening balance in the fixed asset account.","# Adicionar um Ativo Existente
+
+Se você está apenas começando com o ERPNext, será necessário cadastrar os Ativos que você já possui. Você pode adicioná-los como ativos fixos existentes no ERPNext. Note que será necessário fazer um Lançamento no Livro Diário separado para atualizar o saldo inicial na conta de ativo fixo.",
+Add an existing Asset,Adicionar um Ativo existente,
+Let's Set Up the Selling Module.,Vamos configurar o módulo de Vendas.,
+"Products, Sales, Analysis, and more.","Produtos, Vendas, Análises e mais.",
+The Selling Module is all set up!,O módulo de Vendas está configurado!,
+"# Sales Order
+
+A Sales Order is a confirmation of an order from your customer. It is also referred to as Proforma Invoice.
+
+Sales Order at the heart of your sales and purchase transactions. Sales Orders are linked in Delivery Note, Sales Invoices, Material Request, and Maintenance transactions. Through Sales Order, you can track fulfillment of the overall deal towards the customer.","# Pedido de Venda
+
+Um Pedido de Venda é a confirmação de um pedido do seu cliente. Também é chamado de Fatura Pró-forma.
+
+O Pedido de Venda está no centro das suas transações de venda e compra. Pedidos de Venda estão vinculados a Notas de Entrega, Faturas de Venda, Requisições de Material e transações de Manutenção. Através do Pedido de Venda, você pode acompanhar o cumprimento de todo o negócio junto ao cliente.",
+Let’s convert your first Sales Order against a Quotation,Vamos converter seu primeiro Pedido de Venda a partir de um Orçamento,
+Selling Settings,Configurações de Vendas,
+"# Selling Settings
+
+CRM and Selling module’s features are configurable as per your business needs. Selling Settings is the place where you can set your preferences for:
+ - Customer naming and default values
+ - Billing and shipping preference in sales transactions
+","# Configurações de Vendas
+
+Os recursos dos módulos de CRM e Vendas são configuráveis de acordo com as necessidades do seu negócio. Configurações de Vendas é o lugar onde você define suas preferências para:
+ - Nomenclatura de clientes e valores padrão
+ - Preferências de cobrança e envio nas transações de venda
+",
+Let’s walk-through Selling Settings,Vamos percorrer as Configurações de Vendas,
+Let's Set Up the Buying Module.,Vamos configurar o módulo de Compras.,
+"Products, Purchases, Analysis, and more.","Produtos, Compras, Análises e mais.",
+The Buying Module is all set up!,O módulo de Compras está configurado!,
+Create first Purchase Order,Criar o primeiro Pedido de Compra,
+"# Create first Purchase Order
+
+Purchase Order is at the heart of your buying transactions. In ERPNext, Purchase Order can can be created against a Purchase Material Request (indent) and Supplier Quotation as well.  Purchase Orders is also linked to Purchase Receipt and Purchase Invoices, allowing you to keep a birds-eye view on your purchase deals.
+
+","# Criar o primeiro Pedido de Compra
+
+O Pedido de Compra está no centro das suas transações de compra. No ERPNext, o Pedido de Compra pode ser criado a partir de uma Requisição de Material de Compra ou de um Orçamento de Fornecedor. Pedidos de Compra também estão vinculados a Recibos de Compra e Faturas de Compra, permitindo que você tenha uma visão geral dos seus negócios de compra.
+
+",
+Let’s create your first Purchase Order,Vamos criar seu primeiro Pedido de Compra,
+Track Material Request,Acompanhar Requisição de Material,
+"# Track Material Request
+
+
+Also known as Purchase Request or an Indent, is a document identifying a requirement of a set of items (products or services) for various purposes like procurement, transfer, issue, or manufacturing. Once the Material Request is validated, a purchase manager can take the next actions for purchasing items like requesting RFQ from a supplier or directly placing an order with an identified Supplier.
+
+","# Acompanhar Requisição de Material
+
+
+Também conhecida como Pedido de Compra Interno, é um documento que identifica a necessidade de um conjunto de itens (produtos ou serviços) para diversas finalidades, como aquisição, transferência, saída de estoque ou fabricação. Depois que a Requisição de Material é validada, um gerente de compras pode tomar as próximas ações para comprar os itens, como solicitar uma Cotação (RFQ) a um fornecedor ou fazer o pedido diretamente com um Fornecedor identificado.
+
+",
+Let’s create your first Material Request,Vamos criar sua primeira Requisição de Material,
+Buying Settings,Configurações de Compras,
+"# Buying Settings
+
+
+Buying module’s features are highly configurable as per your business needs. Buying Settings is the place where you can set your preferences for:
+
+- Supplier naming and default values
+- Billing and shipping preference in buying transactions
+
+
+","# Configurações de Compras
+
+
+Os recursos do módulo de Compras são altamente configuráveis de acordo com as necessidades do seu negócio. Configurações de Compras é o lugar onde você define suas preferências para:
+
+- Nomenclatura de fornecedores e valores padrão
+- Preferências de cobrança e envio nas transações de compra
+
+
+",
+Let’s walk-through few Buying Settings,Vamos percorrer algumas Configurações de Compras,
+Let's Set Up Your Accounts and Taxes.,Vamos configurar suas Contas e Impostos.,
+"Accounts, Invoices, Taxation, and more.","Contas, Faturas, Tributação e mais.",
+The Accounts Module is all set up!,O módulo de Contas está configurado!,
+Setting up Taxes,Configurando Impostos,
+"# Setting up Taxes
+
+ERPNext lets you configure your taxes so that they are automatically applied in your buying and selling transactions. You can configure them globally or even on Items. ERPNext taxes are pre-configured for most regions.","# Configurando Impostos
+
+O ERPNext permite configurar seus impostos para que sejam aplicados automaticamente nas suas transações de compra e venda. Você pode configurá-los globalmente ou até mesmo por Item. Os impostos do ERPNext já vêm pré-configurados para a maioria das regiões.",
+Manage Sales Tax Templates,Gerenciar Modelos de Impostos de Venda,
+Review Chart of Accounts,Revisar Plano de Contas,
+"# Chart Of Accounts
+
+ERPNext sets up a simple chart of accounts for each Company you create, but you can modify it according to business and legal requirements.","# Plano de Contas
+
+O ERPNext configura um plano de contas simples para cada Empresa que você criar, mas você pode modificá-lo de acordo com as necessidades do negócio e exigências legais.",
+Learn more about Chart of Accounts,Saiba mais sobre o Plano de Contas,
+Financial Statements,Demonstrativos Financeiros,
+"# Financial Statements
+
+In ERPNext, you can get crucial financial reports like [Balance Sheet] and [Profit and Loss] statements with a click of a button. You can run in the report for a different period and plot analytics charts premised on statement data. For more reports, check sections like Financial Statements, General Ledger, and Profitability reports.
+
+<b>[Check Accounting reports](https://docs.erpnext.com/docs/v13/user/manual/en/accounts/accounting-reports)</b>","# Demonstrativos Financeiros
+
+No ERPNext, você pode obter relatórios financeiros essenciais como o [Balanço Patrimonial] e a [Demonstração de Resultado] com um clique. Você pode gerar o relatório para um período diferente e plotar gráficos analíticos com base nos dados do demonstrativo. Para mais relatórios, confira seções como Demonstrativos Financeiros, Livro Razão e relatórios de Lucratividade.
+
+<b>[Confira os relatórios contábeis](https://docs.erpnext.com/docs/v13/user/manual/en/accounts/accounting-reports)</b>",
+Updating Opening Balances,Atualizando Saldos Iniciais,
+"# Updating Opening Balances
+
+Once you close the financial statement in previous accounting software, you can update the same as opening in your ERPNext's Balance Sheet accounts. This will allow you to get complete financial statements from ERPNext in the coming years, and discontinue the parallel accounting system right away.","# Atualizando Saldos Iniciais
+
+Depois de encerrar o demonstrativo financeiro no seu antigo sistema contábil, você pode atualizar o mesmo valor como saldo inicial nas contas do Balanço Patrimonial do ERPNext. Isso permitirá que você obtenha demonstrativos financeiros completos do ERPNext nos próximos anos, e descontinue o sistema contábil paralelo imediatamente.",
+Learn how to update opening balances,Saiba como atualizar os saldos iniciais,
+Create Your First Purchase Invoice ,Criar sua Primeira Fatura de Compra ,
+"# Create your first Purchase Invoice
+
+A Purchase Invoice is a bill received from a Supplier for a product(s) or service(s) delivery to your company. You can track payables through Purchase Invoice and process Payment Entries against it.
+
+Purchase Invoices can also be created against a Purchase Order or Purchase Receipt.","# Crie sua primeira Fatura de Compra
+
+Uma Fatura de Compra é uma conta recebida de um Fornecedor pela entrega de produto(s) ou serviço(s) à sua empresa. Você pode acompanhar as contas a pagar através da Fatura de Compra e processar Lançamentos de Pagamento a partir dela.
+
+Faturas de Compra também podem ser criadas a partir de um Pedido de Compra ou Recibo de Compra.",
+Let’s create your first Purchase Invoice,Vamos criar sua primeira Fatura de Compra,
+Cost Centers for Budgeting and Analysis,Centros de Custo para Orçamento e Análise,
+"# Cost Centers for Budgeting and Analysis
+
+While your Books of Accounts are framed to fulfill statutory requirements, you can set up Cost Center and Accounting Dimensions to address your companies reporting and budgeting requirements.
+
+Click here to learn more about how  <b>[Cost Center](https://docs.erpnext.com/docs/v13/user/manual/en/accounts/cost-center)</b> and <b> [Dimensions](https://docs.erpnext.com/docs/v13/user/manual/en/accounts/accounting-dimensions)</b> allow you to get advanced financial analytics reports from ERPNext.","# Centros de Custo para Orçamento e Análise
+
+Enquanto seus Livros Contábeis são estruturados para atender às exigências legais, você pode configurar Centros de Custo e Dimensões Contábeis para atender às necessidades de relatórios e orçamento da sua empresa.
+
+Clique aqui para saber mais sobre como <b>[Centro de Custo](https://docs.erpnext.com/docs/v13/user/manual/en/accounts/cost-center)</b> e <b>[Dimensões](https://docs.erpnext.com/docs/v13/user/manual/en/accounts/accounting-dimensions)</b> permitem obter relatórios analíticos financeiros avançados no ERPNext.",
+View Cost Center Tree,Ver Árvore de Centros de Custo,
+Accounts Settings,Configurações de Contas,
+"# Account Settings
+
+In ERPNext, Accounting features are configurable as per your business needs. Accounts Settings is the place to define some of your accounting preferences like:
+
+ - Credit Limit and over billing settings
+ - Taxation preferences
+ - Deferred accounting preferences
+","# Configurações de Contas
+
+No ERPNext, os recursos de Contabilidade são configuráveis de acordo com as necessidades do seu negócio. Configurações de Contas é o lugar para definir algumas das suas preferências contábeis, como:
+
+ - Limite de Crédito e configurações de faturamento excedente
+ - Preferências de tributação
+ - Preferências de contabilidade diferida
+",
+Take a quick walk-through of Accounts Settings,Faça um tour rápido pelas Configurações de Contas,
+Let's begin your journey with ERPNext,Vamos começar sua jornada com o ERPNext,
+"Item, Customer, Supplier and Quotation","Item, Cliente, Fornecedor e Orçamento",
+You're ready to start your journey with ERPNext,Você está pronto para começar sua jornada com o ERPNext,
+Create a Customer,Criar um Cliente,
+"# Create a Customer
+
+The Customer master is at the heart of your sales transactions. Customers are linked in Quotations, Sales Orders, Invoices, and Payments. Customers can be either numbered or identified by name (you would typically do this based on the number of customers you have).
+
+Through Customer’s master, you can effectively track essentials like:
+ - Customer’s multiple address and contacts
+ - Account Receivables
+ - Credit Limit and Credit Period
+","# Criar um Cliente
+
+O cadastro de Cliente está no centro das suas transações de venda. Clientes estão vinculados a Orçamentos, Pedidos de Venda, Faturas e Pagamentos. Clientes podem ser identificados por número ou por nome (normalmente isso depende da quantidade de clientes que você tem).
+
+Através do cadastro do Cliente, você pode acompanhar de forma eficaz itens essenciais como:
+ - Múltiplos endereços e contatos do Cliente
+ - Contas a Receber
+ - Limite de Crédito e Prazo de Crédito
+",
+Let’s create your first Customer,Vamos criar seu primeiro Cliente,
+"# Create an Item
+
+Item is a product or a service offered by your company, or something you buy as a part of your supplies or raw materials.
+
+Items are integral to everything you do in ERPNext - from billing, purchasing to managing inventory. Everything you buy or sell, whether it is a physical product or a service is an Item. Items can be stock, non-stock, variants, serialized, batched, assets, etc.
+","# Criar um Item
+
+Item é um produto ou serviço oferecido pela sua empresa, ou algo que você compra como parte dos seus suprimentos ou matérias-primas.
+
+Itens são essenciais para tudo o que você faz no ERPNext - do faturamento à compra e gestão de estoque. Tudo o que você compra ou vende, seja um produto físico ou um serviço, é um Item. Itens podem ser de estoque, sem estoque, com variantes, serializados, em lote, ativos, etc.
+",
+Create a new Item,Criar um novo Item,
+Create Your First Sales Invoice ,Criar sua Primeira Fatura de Venda ,
+"# All about sales invoice
+
+A Sales Invoice is a bill that you send to your Customers against which the Customer makes the payment. Sales Invoice is an accounting transaction. On submission of Sales Invoice, the system updates the receivable and books income against a Customer Account.","# Tudo sobre a fatura de venda
+
+Uma Fatura de Venda é uma conta que você envia aos seus Clientes, contra a qual o Cliente efetua o pagamento. A Fatura de Venda é uma transação contábil. Ao submeter a Fatura de Venda, o sistema atualiza as contas a receber e registra a receita na Conta do Cliente.",
+{} Published,{} Publicado,
+{} Active,{} Ativo,
+{} Open,{} Aberto,
+{} Assigned,{} Atribuído,
+{}  To Receive,{}  A Receber,
+{} Pending,{} Pendente,
+{} Available,{} Disponível,
+{}  To Deliver,{}  A Entregar,
+{} To Bill,{} A Faturar,
+{}  Available,{}  Disponível,
+Learn Sales Management,Aprender Gestão de Vendas,
+Learn Accounting,Aprender Contabilidade,
+Learn Procurement,Aprender Compras,
+Learn Project Management,Aprender Gestão de Projetos,
+Learn Manufacturing,Aprender Fabricação,
+Learn Inventory Management,Aprender Gestão de Estoque,
+"<span class=""h4""><b>Documents</b></span>","<span class=""h4""><b>Documentos</b></span>",
+"<span class=""h4""><b>Integrations</b></span>","<span class=""h4""><b>Integrações</b></span>",
+"<span class=""h4""><b>Settings</b></span>","<span class=""h4""><b>Configurações</b></span>",
+"<span style=""font-size: 18px; letter-spacing: 0.18px;""><b>Get started</b><br></span>","<span style=""font-size: 18px; letter-spacing: 0.18px;""><b>Primeiros Passos</b><br></span>",
+"<span style=""font-size: 18px; letter-spacing: 0.18px;""><b>Components to build your app</b></span>","<span style=""font-size: 18px; letter-spacing: 0.18px;""><b>Componentes para construir seu app</b></span>",
+"<span class=""h2"">Hi,</span>","<span class=""h2"">Olá,</span>",
