@@ -282,8 +282,28 @@ class TestUryPosApi(unittest.TestCase):
 
     def test_authorized_create_customer(self):
         frappe.set_user("Administrator")
-        
+
         result = create_customer("Test Auth Customer", "+919876543210")
-        
+
         self.assertEqual(result.get("status"), "success")
         self.assertTrue(frappe.db.exists("Customer", "Test Auth Customer"))
+
+    def test_create_customer_uses_selling_settings_territory(self):
+        frappe.set_user("Administrator")
+        original_territory = frappe.db.get_single_value("Selling Settings", "territory")
+        frappe.db.set_single_value("Selling Settings", "territory", "Brazil")
+        try:
+            result = create_customer("Test Auth Customer", "+919876543210")
+            self.assertEqual(result.get("territory"), "Brazil")
+        finally:
+            frappe.db.set_single_value("Selling Settings", "territory", original_territory)
+
+    def test_create_customer_does_not_default_territory_to_india(self):
+        frappe.set_user("Administrator")
+        original_territory = frappe.db.get_single_value("Selling Settings", "territory")
+        frappe.db.set_single_value("Selling Settings", "territory", "")
+        try:
+            result = create_customer("Test Auth Customer", "+919876543210")
+            self.assertNotEqual(result.get("territory"), "India")
+        finally:
+            frappe.db.set_single_value("Selling Settings", "territory", original_territory)
