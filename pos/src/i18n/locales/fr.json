@@ -65,7 +65,8 @@
     "print": "Imprimer",
     "payment": "Paiement",
     "order_actions": "Actions sur la commande",
-    "edit_order": "Modifier la commande"
+    "edit_order": "Modifier la commande",
+    "qty": "Qté"
   },
   "payment": {
     "title": "Paiement",

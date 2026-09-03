@@ -71,7 +71,8 @@
         "enter_cancel_reason": "أدخل سبب الإلغاء",
         "print": "طباعة",
         "payment": "الدفع",
-        "edit_order": "تعديل الطلب"
+        "edit_order": "تعديل الطلب",
+        "qty": "الكمية"
     },
     "payment": {
         "title": "الدفع",

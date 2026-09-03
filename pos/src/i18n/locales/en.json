@@ -65,7 +65,8 @@
     "print": "Print",
     "payment": "Payment",
     "order_actions": "Order actions",
-    "edit_order": "Edit order"
+    "edit_order": "Edit order",
+    "qty": "Qty"
   },
   "payment": {
     "title": "Payment",

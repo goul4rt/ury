@@ -59,10 +59,6 @@ website_route_rules = [
     {"from_route": "/ury/<path:app_path>", "to_route": "ury"},
 ]
 
-# POS v2 is hidden for now; send anyone hitting it to the POS v1 table view
-website_redirects = [
-    {"source": r"pos(/.*)?", "target": "/urypos/Table"},
-]
 # Home Pages
 # ----------
 

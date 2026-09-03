@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Trash2, Edit, FrownIcon, Plus, Loader2, MessageSquare } from 'lucide-react';
 import { usePOSStore } from '../store/pos-store';
 import { cn } from '@ury/ui';
-import { formatCurrency } from '@ury/core';
+import { formatCurrency, formatQty } from '@ury/core';
 import { CustomerSelect } from './CustomerSelect';
 import ProductDialog from './ProductDialog';
 import OrderTypeSelect from './OrderTypeSelect';
@@ -246,7 +246,7 @@ const OrderPanel = () => {
                       >
                         -
                       </Button>
-                      <span className="w-6 text-center">{item.quantity}</span>
+                      <span className="min-w-10 text-center tabular-nums">{formatQty(item.quantity)}</span>
                       <Button
                         onClick={() => updateQuantity(item.uniqueId!, Math.round((item.quantity + 1) * 1000) / 1000)}
                         variant="outline"

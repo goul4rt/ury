@@ -1,6 +1,6 @@
-import { Globe, Phone, ShoppingBag, Truck, Utensils } from "lucide-react";
+import { Phone, ShoppingBag, Truck, Utensils } from "lucide-react";
 
-export type OrderType = "Dine In" | "Take Away" | "Delivery" | "Phone In" | "Aggregators";
+export type OrderType = "Dine In" | "Take Away" | "Delivery" | "Phone In";
 
 export type OrderTypes= {
     label: string;
@@ -28,17 +28,14 @@ export const ORDER_TYPES: OrderTypes[] = [
         label: "Phone In",
         value: "Phone In",
         icon: Phone
-    },
-    {
-        label: "Aggregators",
-        value: "Aggregators",
-        icon: Globe
     }
 ]
 
 export const DINE_IN="Dine In"
 export const DEFAULT_ORDER_TYPE="Take Away"
-export const DEFAULT_PAYMENT_MODE="Cash"
+// pt-BR deployment: the site's mode of payment is "Dinheiro"; ERPNext's "Cash" is disabled there,
+// and without a match the payment dialog never prefills the amount.
+export const DEFAULT_PAYMENT_MODE="Dinheiro"
 
 export type OrderStatusType = "Draft" | "Unbilled" | "Recently Paid" | "Paid" | "Consolidated" | "Return";
 

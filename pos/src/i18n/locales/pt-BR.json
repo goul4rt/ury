@@ -65,7 +65,8 @@
     "print": "Imprimir",
     "payment": "Pagamento",
     "order_actions": "Ações do pedido",
-    "edit_order": "Editar pedido"
+    "edit_order": "Editar pedido",
+    "qty": "Qtd"
   },
   "payment": {
     "title": "Pagamento",
